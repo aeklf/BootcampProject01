@@ -21,7 +21,7 @@ THEN it is arranged based on weather, gender and preferences
 
 ## Technical Criteria
 
-- Utilizes CSS framework obtained from Ant Design
+- Utilizes CSS framework obtained from TailwindCSS (https://tailwindcss.com/)
 - Deploys in GitHub Pages
 - Interactive and Responsive User Interface
 - Uses multiple APIs

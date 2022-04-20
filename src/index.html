@@ -70,8 +70,6 @@
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Your Profile</a>
       
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Settings</a>
-      
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Sign out</a>
               </div>
             </div>
           </div>
@@ -84,6 +82,7 @@
                 <div class="box">
                   <form>
                     <span class="text-center">Where are you?</span>
+                    <span class="text-centric">Enter your current location or travel destination</span>
                   <div class="input-container">
                     <input type="text" required=""/>
                     <label>Location</label>		
@@ -96,7 +95,12 @@
       </div>
 
   <div id="weatherPage" style="display:none;">
-    
+    <div class= "flex items-center justify-center h-screen bg-blue-100 box">
+      <span class="text-center">Here is the weather in your current location!</span>
+      <!-- Weather API rel. to location -->
+      <span class="text-center">These are some clothes we suggest you use:</span>
+      <!-- Clothes rel. to location -->
+    </div>
   </div>
 
 </body>

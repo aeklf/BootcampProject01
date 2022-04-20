@@ -105,11 +105,22 @@
         </header>
         <main>
           <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <!-- Replace with your content -->
             <div class="px-4 py-6 sm:px-0">
-              <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
-            </div>
-            <!-- /End replace -->
+              <div class="flex items-center justify-center h-screen bg-blue-100">
+                <div>
+                  <label for="price" class="block text-sm font-medium text-gray-700">Where are you?</label>
+                  <div class="mt-1 relative rounded-md shadow-sm">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span class="text-gray-500 sm:text-sm"></span>
+                    </div>
+                    <input type="text" name="price" id="price" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="Location">
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <button class = "flex items-center justify-between h-screen border-indigo-500 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <span>Enter</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
           </div>
         </main>
       </div>

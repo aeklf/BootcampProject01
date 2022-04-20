@@ -15,6 +15,12 @@
   font-weight: lighter;
 }
 
+body {
+  background-image: url(/src/assets/images/weather.gif);
+  background-position: top;
+  background-color: black;
+}
+
 .text-center {
   color: cornflowerblue;
   text-transform: uppercase;

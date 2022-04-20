@@ -1,0 +1,23 @@
+{
+  "name": "bootcampproject01",
+  "version": "1.0.0",
+  "description": "## About",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build ./Develop/assets/style.css -o public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeklf/BootcampProject01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aeklf/BootcampProject01/issues"
+  },
+  "homepage": "https://github.com/aeklf/BootcampProject01#readme",
+  "dependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

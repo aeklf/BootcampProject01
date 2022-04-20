@@ -1,7 +1,7 @@
 module.exports = {
   content: [
-    "./Develop/index.html",
-    "./Develop/script.js"
+    "./src/index.html",
+    "./src/script.js"
   ],
   presets: [],
   darkMode: 'media', // or 'class'

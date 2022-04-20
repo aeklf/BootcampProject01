@@ -17,7 +17,7 @@
     "url": "https://github.com/aeklf/BootcampProject01/issues"
   },
   "homepage": "https://github.com/aeklf/BootcampProject01#readme",
-  "dependencies": {
+  "devDependencies": {
     "tailwindcss": "^3.0.24"
   }
 }

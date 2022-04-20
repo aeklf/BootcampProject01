@@ -12,3 +12,9 @@
   font-family: CloudFont;
   font-size: xx-large;
 }
+
+#locationinput {
+  border: 2px aliceblue;
+  border-radius: 4px;
+  background-color: aliceblue;
+}

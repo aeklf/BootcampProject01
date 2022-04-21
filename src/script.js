@@ -15,6 +15,8 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=
     var temperatureValue = data['main']['temp'];
     var humidityValue = data ['main']['humidity'];
 
+   console.log(temperatureValue)
+   console.log(humidityValue)
 
 })
 

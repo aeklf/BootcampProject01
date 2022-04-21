@@ -1,5 +1,23 @@
 //Test script for back end logic//
 
+var button = document.querySelector('#locationbtn');
+
+function informationfunction() {
+
+fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
+.then(response => response.json())
+// .then(data => console.log(data))
+.then(data => {
+    return data['main']['temp'];
+    // var humidityValue = data ['main']['humidity'];
+    // console.log(temperatureValue);
+    // console.log(humidityValue);
+})
+
+}
+
+button.addEventListener('click', informationfunction);
+
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 
 class User {
@@ -29,7 +47,7 @@ const User1 = new User(Object.assign(User1Jackets),"cardigan","sunglasses");
 //Temp ranges: <6, 6-13, 13-20, 20-27, >27.
 //Cloud ranges: <25%, 25-50%, 50-75%, >75%.
 
-function currentWeather(temp,cloud){
+function currentWeather(temperatureValue,humidityValue){
     if(6 < temp && 13 >= temp && cloud <= 0.25){
         console.log("Test in function")
         return("Scenario 1")

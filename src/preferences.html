@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./assets/style.css">
     </head>
 
-    <body>
+    <header>
         <div class="min-h-full">
             <nav class="bg-gray-800">
               <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,20 +30,26 @@
                   </div>
               </div>
             </div>
-
+    </header>
+    
+    <body>
         <!-- Preference Input Box -->
         <div class="box">
             <form> <!-- replace with preference form -->
                 <span class="text-center" id="customText">Customize your clothes recomendations:</span>
             <div class="input-container">
-                <input type="text" required=""/>
-                <label>Name</label>		
-            </div>
-            <div class="input-container">		
-                <input type="mail" required=""/>
-                <label>Email</label>
-            </div>
+                <div class="boxes">
+                    <input type="checkbox" id="box-1">
+                    <label for="box-1">Sweaters</label>
+                    <input type="checkbox" id="box-2">
+                    <label for="box-2">Shorts</label>
+                    <input type="checkbox" id="box-3">
+                    <label for="box-3">Pants</label>
+                    <input type="checkbox" id="box-4">
+                    <label for="box-4">T-Shirts</label>
+                </div>
                 <button type="button" class="btn"><a href="#">SUBMIT</a></button>
         </form>	
         </div>
-</body>
+    </body>
+</html>

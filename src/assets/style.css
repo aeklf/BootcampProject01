@@ -94,3 +94,16 @@ body {
   top: -12px;
   font-size: 12px;
 }
+
+#aboutIcon {
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#aboutText {
+  font-size: small;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+}

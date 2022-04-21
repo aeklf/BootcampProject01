@@ -175,3 +175,12 @@ input[type="checkbox"]:checked + label:before {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.prefBtn {
+  align-items: baseline;
+  justify-content: center;
+}
+
+.resultsText {
+  font-size: small;
+}

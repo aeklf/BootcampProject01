@@ -47,6 +47,7 @@ body {
   background-color: rgba(0, 0, 0, 0.89);
   border-radius: 3px;
   padding: 70px 100px;
+  margin-top: 120px;
 }
 .input-container {
   position: relative;
@@ -183,4 +184,34 @@ input[type="checkbox"]:checked + label:before {
 
 .resultsText {
   font-size: small;
+}
+
+.catText {
+  font-size: small;
+  color: #6cc0e5;
+  display: flex;
+  white-space: nowrap;
+  padding: 18px 20px 18px 20px;
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

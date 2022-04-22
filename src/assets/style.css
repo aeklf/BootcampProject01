@@ -47,8 +47,13 @@ body {
   background-color: rgba(0, 0, 0, 0.89);
   border-radius: 3px;
   padding: 70px 100px;
+  margin-top: 50px;
+}
+
+#prefBox {
   margin-top: 120px;
 }
+
 .input-container {
   position: relative;
   margin-bottom: 25px;

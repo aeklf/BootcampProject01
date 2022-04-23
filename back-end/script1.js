@@ -11,22 +11,22 @@ function informationfunction() {
     .then(data => {
         temperatureValue = data['main']['temp'];
         humidityValue = data ['main']['humidity'];
-        console.log("Console log: " + temperatureValue);
-        console.log("Console log: " + humidityValue);   
+        console.log("(fetch primary level)Temperature (ºC): " + temperatureValue);
+        console.log("(fetch primary level)Humidity (%): " + humidityValue);   
           
     }).catch(error  => {
     console.log(error);
 })
-
-    console.log("test");
+    
+    console.log("Test in fetch (secondary level)");
     testFun();  
-    currentWeather(temperatureValue,(humidityValue/100));
+    currentWeather(temperatureValue,humidityValue);
 }
 
 button.addEventListener('click', informationfunction);
 
 function testFun(){
-    console.log(temperatureValue, (humidityValue/100));
+    console.log("Test in nested function. T(ºC): " + temperatureValue + "Humidity(%): " + humidityValue);
     return temperatureValue, (humidityValue/100);
 }
 
@@ -42,9 +42,8 @@ class User {
         return this.jacket.option1;
     }
     assignJacket2(){
-        currentWeather(16,0.2);
-        console.log("Test");
-        alert(this.jacket.option2);
+        console.log("Method test");
+        // alert(this.jacket.option2);
         return this.jacket.option2;
     }
 }
@@ -57,51 +56,53 @@ const User1 = new User(Object.assign(User1Jackets),"cardigan","sunglasses");
 //Logical structure for interpreting weather variable inputs
 
 //Temp ranges: <6, 6-13, 13-20, 20-27, >27.
-//Cloud ranges: <25%, 25-50%, 50-75%, >75%.
+//Humidity ranges: <25%, 25-50%, 50-75%, >75%.
 
-function currentWeather(temperatureValue,cloud){
+function currentWeather(temperatureValue,humidityValue){
+    console.log("Test in weather function")
+   
 
-    if(6 < temperatureValue && 13 >= temperatureValue && cloud <= 0.25){
+    if(6 < temperatureValue && 13 >= temperatureValue && humidityValue <= 0.25){
         console.log("Scenario 1")
         return("Scenario 1")
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && cloud < 0.25){
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 0.25){
         console.log("Scenario 2")
         return("Scenario 2") 
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && cloud < 0.25){
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 0.25){
         console.log("Scenario 3")
         return("Scenario 3") 
     }
 
-    else if(6 < temperatureValue && 13 >= temperatureValue && cloud >= 0.25 && cloud < 0.5){
+    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
         console.log("Scenario 4")
         return("Scenario 4") 
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && cloud >= 0.25 && cloud < 0.5){
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
         console.log("Scenario 5")
         return("Scenario 5") 
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && cloud >= 0.25 && cloud < 0.5){
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
         console.log("Scenario 6")
         return("Scenario 6") 
     }
 
-    else if(6 < temperatureValue && 13 >= temperatureValue && cloud >= 0.5 && cloud > 0.75){
+    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 7")
         return("Scenario 7") 
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && cloud >= 0.5 && cloud > 0.75){
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 8")
         return("Scenario 8") 
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && cloud >= 0.5 && cloud > 0.75){
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 9")
         return("Scenario 9") 
     }

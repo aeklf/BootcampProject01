@@ -1,33 +1,33 @@
 //Test script for back end logic//
 
 var button = document.querySelector('#locationbtn');
-var button2 = document.querySelector('#locationbtn2');
 var temperatureValue;
+var humidityValue;
 
 function informationfunction() {
 
     fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
-    // .then(data => console.log(data))
     .then(data => {
-        //  var temperatureValue = data['main']['temp'];
-        //  var humidityValue = data ['main']['humidity'];
-        //  console.log(temperatureValue);
-        //  console.log(humidityValue);
-        //  testFun(20);  
-         return temperatureValue = data['main']['temp'];   
+        temperatureValue = data['main']['temp'];
+        humidityValue = data ['main']['humidity'];
+        console.log("Console log: " + temperatureValue);
+        console.log("Console log: " + humidityValue);   
           
+    }).catch(error  => {
+    console.log(error);
 })
+
     console.log("test");
-    testFun(temperatureValue);  
-    currentWeather(temperatureValue,0.8);
+    testFun();  
+    currentWeather(temperatureValue,(humidityValue/100));
 }
 
 button.addEventListener('click', informationfunction);
 
-function testFun(temperatureValue){
-    console.log(temperatureValue)
-    return temperatureValue;
+function testFun(){
+    console.log(temperatureValue, (humidityValue/100));
+    return temperatureValue, (humidityValue/100);
 }
 
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
@@ -61,9 +61,6 @@ const User1 = new User(Object.assign(User1Jackets),"cardigan","sunglasses");
 
 function currentWeather(temperatureValue,cloud){
 
-    //  var temperatureValue = 20;
-    //  var cloud = 0.3;
-
     if(6 < temperatureValue && 13 >= temperatureValue && cloud <= 0.25){
         console.log("Scenario 1")
         return("Scenario 1")
@@ -79,12 +76,12 @@ function currentWeather(temperatureValue,cloud){
         return("Scenario 3") 
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && cloud >= 0.25 && cloud < 0.5){
+    else if(6 < temperatureValue && 13 >= temperatureValue && cloud >= 0.25 && cloud < 0.5){
         console.log("Scenario 4")
         return("Scenario 4") 
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && cloud >= 0.25 && cloud < 0.5){
+    else if(13 < temperatureValue && 20 >= temperatureValue && cloud >= 0.25 && cloud < 0.5){
         console.log("Scenario 5")
         return("Scenario 5") 
     }
@@ -94,12 +91,12 @@ function currentWeather(temperatureValue,cloud){
         return("Scenario 6") 
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && cloud >= 0.5 && cloud > 0.75){
+    else if(6 < temperatureValue && 13 >= temperatureValue && cloud >= 0.5 && cloud > 0.75){
         console.log("Scenario 7")
         return("Scenario 7") 
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && cloud >= 0.5 && cloud > 0.75){
+    else if(13 < temperatureValue && 20 >= temperatureValue && cloud >= 0.5 && cloud > 0.75){
         console.log("Scenario 8")
         return("Scenario 8") 
     }

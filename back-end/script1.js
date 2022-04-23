@@ -26,7 +26,7 @@ function informationfunction() {
 button.addEventListener('click', informationfunction);
 
 function testFun(){
-    console.log("Test in nested function. T(ºC): " + temperatureValue + "Humidity(%): " + humidityValue);
+    console.log("Test in nested function. T(ºC): " + temperatureValue + " Humidity(%): " + humidityValue);
     return temperatureValue, (humidityValue/100);
 }
 
@@ -39,11 +39,12 @@ class User {
         this.glasses = glasses;
     }
     assignJacket1(){
-        return this.jacket.option1;
+        console.log("It is currently very cold and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        console.log("We recomend wearing: " + this.jacket.option1 + ", " + this.sweater + " and " + this.glasses)
     }
     assignJacket2(){
         console.log("Method test");
-        // alert(this.jacket.option2);
+        console.log(this.jacket.option2);
         return this.jacket.option2;
     }
 }
@@ -51,7 +52,7 @@ class User {
 //Temp var for object as parameter testing
 var User1Jackets = {option1:"hoodie", option2:"raincoat"};
 
-const User1 = new User(Object.assign(User1Jackets),"cardigan","sunglasses");
+const User1 = new User(Object.assign(User1Jackets),"sweater","sunglasses");
 
 //Logical structure for interpreting weather variable inputs
 
@@ -64,7 +65,7 @@ function currentWeather(temperatureValue,humidityValue){
 
     if(6 < temperatureValue && 13 >= temperatureValue && humidityValue <= 0.25){
         console.log("Scenario 1")
-        return("Scenario 1")
+        User1.assignJacket1();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 0.25){
@@ -94,7 +95,7 @@ function currentWeather(temperatureValue,humidityValue){
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 7")
-        return("Scenario 7") 
+        User1.assignJacket2();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
@@ -104,6 +105,10 @@ function currentWeather(temperatureValue,humidityValue){
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 9")
+        return("Scenario 9") 
+    }
+    else {
+        console.log("Scenario 10,11 or 12")
         return("Scenario 9") 
     }
 }

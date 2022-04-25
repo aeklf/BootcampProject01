@@ -1,11 +1,12 @@
 //Test script for back end logic//
 
+// API (test) fetch function:  returns variables to be used in outfit assignment function.
+
 var button = document.querySelector('#locationbtn');
 var temperatureValue;
 var humidityValue;
 
-// API (test) fetch function:  returns variables to be used in outfit assignment function.
-
+//Function set to Reykjavik for testing. The middle value of 300 has to be replaced by user location.value input. 
 
 function informationfunction() {
 
@@ -31,14 +32,14 @@ function informationfunction() {
 
 button.addEventListener('click', informationfunction);
 
-// Function te return humidity in 0-1 range.
+// Function to return humidity in 0-1 value.
 
 function returnFun(){
     console.log("Test in nested function. T(ºC): " + temperatureValue + " Humidity(%): " + humidityValue);
     return temperatureValue, (humidityValue/100);
 }
 
-// Variable assignment for test images (temp)
+// Variable assignment for test images (temp), for JQuery image append
 
 var topVar = document.querySelector(".main");
 var topVarText = document.querySelector("#topText");
@@ -88,7 +89,7 @@ class User {
     }
 }
 
-// Objects with names(according to scenarios), and values according to user input (wardrobe).
+// Objects with names(according to scenarios(ie. option 1.1 predetermined for rain like conditions)), and values according to user input (wardrobe).
 
 var User1Jackets = {option1:"hoodie", option2:"T-shirt"};
 var User1Pants = {option1:"jeans", option2:"shorts"};
@@ -104,63 +105,66 @@ const User1 = new User(Object.assign(User1Jackets),Object.assign(User1Pants),Obj
 //Humidity ranges: <25%, 25-50%, 50-75%, >75%.
 
 function currentWeather(temperatureValue,humidityValue){
+
     console.log("Test in weather function")
-   
 
     if(6 < temperatureValue && 13 >= temperatureValue && humidityValue <= 0.25){
         console.log("Scenario 1")
         User1.assignJacket1();
+        // User1.assignOutfit1();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 0.25){
         console.log("Scenario 2")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue); 
+        // User1.assignOutfit2();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 0.25){
         console.log("Scenario 3")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-
+        // User1.assignOutfit3();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
         console.log("Scenario 4")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
- 
+        // User1.assignOutfit4();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
         console.log("Scenario 5")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-
+        // User1.assignOutfit5();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
         console.log("Scenario 6")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-
+        // User1.assignOutfit6();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 7")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignJacket2();
+        // User1.assignOutfit7();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 8")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
- 
+        // User1.assignOutfit8();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
         console.log("Scenario 9")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-
+        // User1.assignOutfit9();
     }
     else {
         console.log("Scenario 10,11 or 12")
         User1.assignJacket1();
+        // User1.assignOutfit10();
     }
 }
 

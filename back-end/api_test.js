@@ -1,6 +1,6 @@
 // var button = document.querySelector('#locationbtn');
 
-function informationfunction() {
+function informationfunctionIS() {
 
 fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
 .then(response => response.json())
@@ -14,6 +14,6 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c
 
 }
 
-informationfunction()
+informationfunctionIS()
 
 // button.addEventListener('click', informationfunction);

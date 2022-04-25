@@ -4,6 +4,9 @@ var button = document.querySelector('#locationbtn');
 var temperatureValue;
 var humidityValue;
 
+// API (test) fetch function:  returns variables to be used in outfit assignment function.
+
+
 function informationfunction() {
 
     fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
@@ -20,19 +23,22 @@ function informationfunction() {
 })
     
     console.log("Test in fetch (secondary level)");
-    testFun();  
+    returnFun();  
     
 }
 
+// Button: runs main fetch function. 
+
 button.addEventListener('click', informationfunction);
 
-function testFun(){
+// Function te return humidity in 0-1 range.
+
+function returnFun(){
     console.log("Test in nested function. T(ºC): " + temperatureValue + " Humidity(%): " + humidityValue);
     return temperatureValue, (humidityValue/100);
 }
 
-
-//Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
+// Variable assignment for test images (temp)
 
 var topVar = document.querySelector(".main");
 var topVarText = document.querySelector("#topText");
@@ -50,6 +56,8 @@ var image5 = new Image();
 image5.src = "./Images/cap_image.png"
 var image6 = new Image();
 image6.src = "./Images/shorts_image.png"
+
+//Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class User {
     constructor(jacket,pants,glasses){
         this.jacket = jacket;
@@ -80,37 +88,19 @@ class User {
     }
 }
 
-//Temp var for object as parameter testing
+// Objects with names(according to scenarios), and values according to user input (wardrobe).
+
 var User1Jackets = {option1:"hoodie", option2:"T-shirt"};
 var User1Pants = {option1:"jeans", option2:"shorts"};
 var User1Glasses = {option1:"sunglasses", option2:"cap"};
 
+// Test creation for "User" instance.
+
 const User1 = new User(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses));
 
-var cwbutton = document.querySelector("#currentW");
-var cw2button = document.querySelector("#currentW2");
+//Function for interpreting variables from API fetch, used for assignment of wardrobe options.
 
-cwbutton.addEventListener("click", currentWeather);
-cw2button.addEventListener("click", currentWeatherTest2);
-
-function currentWeatherTest2(temperatureValue,humidityValue){
-    console.log("Test in weather test function")
-    temperatureValue = 26;
-    humidityValue = 0.1;
-
-    if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 0.25){
-        console.log("test WF2");
-        User1.assignJacket2();
-    }
-    else {
-        console.log("else WF2");
-        User1.assignJacket2();
-    }
-}
-
-//Logical structure for interpreting weather variable inputs
-
-//Temp ranges: <6, 6-13, 13-20, 20-27, >27.
+//Temperature ranges: <6, 6-13, 13-20, 20-27, >27.
 //Humidity ranges: <25%, 25-50%, 50-75%, >75%.
 
 function currentWeather(temperatureValue,humidityValue){
@@ -174,3 +164,25 @@ function currentWeather(temperatureValue,humidityValue){
     }
 }
 
+//Test buttons to show functionality (One responsive and one pre-established) (temp)
+
+var cwbutton = document.querySelector("#currentW");
+var cw2button = document.querySelector("#currentW2");
+
+cwbutton.addEventListener("click", currentWeather);
+cw2button.addEventListener("click", currentWeatherTest2);
+
+function currentWeatherTest2(temperatureValue,humidityValue){
+    console.log("Test in weather test function")
+    temperatureValue = 26;
+    humidityValue = 0.1;
+
+    if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 0.25){
+        console.log("test WF2");
+        User1.assignJacket2();
+    }
+    else {
+        console.log("else WF2");
+        User1.assignJacket2();
+    }
+}

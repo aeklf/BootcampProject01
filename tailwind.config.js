@@ -1,7 +1,11 @@
 module.exports = {
   content: [
     "./src/index.html",
-    "./src/script.js"
+    "./src/script.js",
+    "./src/preferences.html",
+    ".src/about.html",
+    "./src/userinfo.html",
+    "./src/results.html"
   ],
   presets: [],
   darkMode: 'media', // or 'class'

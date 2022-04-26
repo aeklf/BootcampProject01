@@ -5,12 +5,13 @@
 var button = document.querySelector('#locationbtn');
 var temperatureValue;
 var humidityValue;
+var input = document.querySelector('#location');
 
 //Function set to Reykjavik for testing. The middle value of 300 has to be replaced by user location.value input. 
 
 function informationfunction() {
 
-    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
+    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
     .then(data => {
         temperatureValue = data['main']['temp'];
@@ -170,25 +171,3 @@ function currentWeather(temperatureValue,humidityValue){
     }
 }
 
-//Test buttons to show functionality (One responsive and one pre-established) (temp)
-
-var cwbutton = document.querySelector("#currentW");
-var cw2button = document.querySelector("#currentW2");
-
-cwbutton.addEventListener("click", currentWeather);
-cw2button.addEventListener("click", currentWeatherTest2);
-
-function currentWeatherTest2(temperatureValue,humidityValue){
-    console.log("Test in weather test function")
-    temperatureValue = 26;
-    humidityValue = 0.1;
-
-    if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 0.25){
-        console.log("test WF2");
-        User1.assignJacket2();
-    }
-    else {
-        console.log("else WF2");
-        User1.assignJacket2();
-    }
-}

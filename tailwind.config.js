@@ -5,7 +5,8 @@ module.exports = {
     "./src/preferences.html",
     ".src/about.html",
     "./src/userinfo.html",
-    "./src/results.html"
+    "./src/results.html",
+    "./src/landingpage.html"
   ],
   presets: [],
   darkMode: 'media', // or 'class'

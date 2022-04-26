@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nifty</title>
+        <link href="../dist/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
+
+    <header>
+        <div class="min-h-full">
+            <nav class="bg-gray-800">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                  <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                      <img class="h-8 w-8" src="assets/images/icon_nifty.png" alt="icon_nifty">
+                    </div>
+                    <div class="hidden md:block">
+                      <div class="ml-10 flex items-baseline space-x-4">
+                        <header>
+                          <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            <h1 class="text-3xl font-bold text-gray-900" id="CloudFont">Nifty</h1>
+                          </div>
+                        </header>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+    </header>
+    
+    <body>
+        <!-- Preference Input Box -->
+        <div class="box" id="prefBox">
+            <form> <!-- replace with preference form -->
+                <span class="text-center" id="customText">Customize your clothes recomendations:</span>
+            <div class="input-container">
+                <div class="boxes">
+                    <span class="catText">Tops</span>
+                    <input type="checkbox" id="box-1">
+                    <label for="box-1">T-Shirts</label>
+                    <input type="checkbox" id="box-2">
+                    <label for="box-2">Hoodies</label>
+                    <span class="catText">Bottoms</span>
+                    <input type="checkbox" id="box-3">
+                    <label for="box-3">Jeans</label>
+                    <span class="catText">Shoes</span>
+                    <input type="checkbox" id="box-4">
+                    <label for="box-4">Sneakers</label>
+                </div>
+                <button type="button" id="prefBtn" class="btn"><a href="#">SUBMIT</a></button>
+        </form>	
+        </div>
+    </body>
+</html>

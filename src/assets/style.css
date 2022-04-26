@@ -2,3 +2,221 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: CloudFont;
+  src: url(/src/assets/fonts/webfontkit-20220420-135435/alphasmoke-oox6-webfont.woff);
+}
+
+#CloudFont {
+  font-family: CloudFont;
+  font-size: 50px;
+  color: aliceblue;
+  font-weight: lighter;
+}
+
+body {
+  background-image: url(/src/assets/images/weather.gif);
+  background-position: top;
+  background-color: black;
+}
+
+.text-center {
+  color: cornflowerblue;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin: -50px 0 80px 0;
+  display: block;
+  text-align: center;
+}
+
+.text-centric {
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: -50px 0 80px 0;
+  display: block;
+  text-align: center;
+}
+
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+  margin-top: 50px;
+}
+
+#prefBox {
+  margin-top: 120px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+.input-container label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  pointer-event: none;
+  transition: all 0.5s ease-in-out;
+}
+.input-container input {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+.input-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid cornflowerblue;
+}
+.btn {
+  color: #fff;
+  background-color: cornflowerblue;
+  outline: none;
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -12px;
+  font-size: 12px;
+}
+
+#aboutIcon {
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#aboutText {
+  font-size: small;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+#customText {
+  font-size: small;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: cornflowerblue;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*Page styles*/
+html {
+  height: 100%;
+}
+
+.boxes {
+  margin: auto;
+  padding: 50px;
+  background: #484848;
+}
+
+/*Checkboxes*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font: 14px/20px "Open Sans", Arial, sans-serif;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #6cc0e5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.prefBtn {
+  align-items: baseline;
+  justify-content: center;
+}
+
+.resultsText {
+  font-size: small;
+}
+
+.catText {
+  font-size: small;
+  color: #6cc0e5;
+  display: flex;
+  white-space: nowrap;
+  padding: 18px 20px 18px 20px;
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

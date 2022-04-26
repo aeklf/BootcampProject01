@@ -76,7 +76,12 @@ function handleFormSubmit (event) {
             }
         }
     }
-    
+
+var User1accessories;
+var User1top;
+var User1bottom;
+var User1shoes;
+
         var user = new NewUser(firstNameEl.value,
              lastNameEl.value,
              email.value,
@@ -89,20 +94,20 @@ function handleFormSubmit (event) {
             alert('Invalid input')
         }
         var User1accessories = {
-            option1: 'sunglasses',
-            option2: 'cap'
+            sunny: 'sunglasses',
+            cold: 'cap'
         }
         var User1top = {
-            option1: 'shirt',
-            option2: 'jacket'
+            normal: 'shirt',
+            rain: 'jacket'
         }
         var User1bottom = {
-            option1: 'jeans',
-            option2: 'shorts'
+            normal: 'jeans',
+            hot: 'shorts'
         }
         var User1shoes = {
-            option1: 'sneakers',
-            option2: 'sandals'
+            normal: 'sneakers',
+            hot: 'sandals'
         }
         localStorage.setItem('UserList', JSON.stringify(userList));
         

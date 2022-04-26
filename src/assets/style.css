@@ -116,8 +116,6 @@ body {
 
 #customText {
   font-size: small;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: cornflowerblue;
 }
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -197,6 +195,19 @@ input[type="checkbox"]:checked + label:before {
   display: flex;
   white-space: nowrap;
   padding: 18px 20px 18px 20px;
+}
+
+#outfitBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* SCROLLBAR */

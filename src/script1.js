@@ -7,7 +7,7 @@ var temperatureValue;
 var humidityValue;
 var input = document.querySelector('#location');
 
-//Function set to Reykjavik for testing. The middle value of 300 has to be replaced by user location.value input. 
+// updated extracts location from user input 
 
 function informationfunction() {
 
@@ -42,24 +42,7 @@ function returnFun(){
     return temperatureValue, (humidityValue/100);
 }
 
-// Variable assignment for test images (temp), for JQuery image append
 
-var topVar = document.querySelector(".main");
-var topVarText = document.querySelector("#topText");
-
-var image1 = new Image();
-image1.src = "./Images/Hoodie_image.jpg"
-var image2 = new Image();
-image2.src = "./Images/sunglasses.png"
-var image3 = new Image();
-image3.src = "./Images/pants_image.png"
-
-var image4 = new Image();
-image4.src = "./Images/tshirt_image.png"
-var image5 = new Image();
-image5.src = "./Images/cap_image.png"
-var image6 = new Image();
-image6.src = "./Images/shorts_image.png"
 
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class User {

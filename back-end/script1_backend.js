@@ -6,7 +6,6 @@ var button = document.querySelector('#locationbtn');
 var temperatureValue;
 var humidityValue;
 
-//Function set to Reykjavik for testing. The middle value of 300 has to be replaced by user location.value input. 
 
 function informationfunction() {
 
@@ -39,50 +38,32 @@ function returnFun(){
     return temperatureValue, (humidityValue/100);
 }
 
-// Variable assignment for test images (temp), for JQuery image append
-
-var topVar = document.querySelector(".main");
-var topVarText = document.querySelector("#topText");
-
-var image1 = new Image();
-image1.src = "./Images/Hoodie_image.jpg"
-var image2 = new Image();
-image2.src = "./Images/sunglasses.png"
-var image3 = new Image();
-image3.src = "./Images/pants_image.png"
-
-var image4 = new Image();
-image4.src = "./Images/tshirt_image.png"
-var image5 = new Image();
-image5.src = "./Images/cap_image.png"
-var image6 = new Image();
-image6.src = "./Images/shorts_image.png"
 
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
-class User {
-    constructor(jacket,pants,glasses){
-        this.jacket = jacket;
-        this.pants = pants;
-        this.glasses = glasses;
+class NewUser {
+    constructor(accessories,top,bottom,shoes,first,last,location){
+        this.accessories = accessories;
+        this.top = top;
+        this.bottom = bottom;
     }
-    assignJacket1(){
+    assignaccessories1(){
         $('.outfit').empty();
         $('#weatherText').html("It is currently very cold and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.jacket.option1 + ", " + this.pants.option1 + " and " + this.glasses.option1);
-        $('#topText').html(this.jacket.option1)
-        $('#bottomText').html(this.pants.option1);
-        $('#shoesText').html(this.glasses.option1);
+        $('#recomText').html("We recomend wearing: " + this.accessories.option1 + ", " + this.top.option1 + " and " + this.bottom.option1);
+        $('#topText').html(this.accessories.option1)
+        $('#bottomText').html(this.top.option1);
+        $('#shoesText').html(this.bottom.option1);
         $(".outfit").append(image2);
         $(".outfit").append(image1);
         $(".outfit").append(image3);
     }
-    assignJacket2(){
+    assignaccessories2(){
         $('.outfit').empty();
         $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + "30" + ", cloudiness (%): " + "8" + ".");
-        $('#recomText').html("We recomend wearing: " + this.jacket.option2 + ", " + this.pants.option2 + " and " + this.glasses.option2);
-        $('#topText').html(this.jacket.option2)
-        $('#bottomText').html(this.pants.option2);
-        $('#shoesText').html(this.glasses.option2);
+        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
+        $('#topText').html(this.accessories.option2)
+        $('#bottomText').html(this.top.option2);
+        $('#shoesText').html(this.bottom.option2);
         $(".outfit").append(image5);
         $(".outfit").append(image4);
         $(".outfit").append(image6);
@@ -91,13 +72,13 @@ class User {
 
 // Objects with names(according to scenarios(ie. option 1.1 predetermined for rain like conditions)), and values according to user input (wardrobe).
 
-var User1Jackets = {option1:"hoodie", option2:"T-shirt"};
-var User1Pants = {option1:"jeans", option2:"shorts"};
-var User1Glasses = {option1:"sunglasses", option2:"cap"};
+var User1accessoriess = {option1:"hoodie", option2:"T-shirt"};
+var User1top = {option1:"jeans", option2:"shorts"};
+var User1bottom = {option1:"sunbottom", option2:"cap"};
 
 // Test creation for "User" instance.
 
-const User1 = new User(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses));
+const User1 = new User(Object.assign(User1accessoriess),Object.assign(User1top),Object.assign(User1bottom));
 
 //Function for interpreting variables from API fetch, used for assignment of wardrobe options.
 
@@ -110,7 +91,7 @@ function currentWeather(temperatureValue,humidityValue){
 
     if(6 < temperatureValue && 13 >= temperatureValue && humidityValue <= 0.25){
         console.log("Scenario 1")
-        User1.assignJacket1();
+        User1.assignaccessories1();
         // User1.assignOutfit1();
     }
 
@@ -163,30 +144,8 @@ function currentWeather(temperatureValue,humidityValue){
     }
     else {
         console.log("Scenario 10,11 or 12")
-        User1.assignJacket1();
+        User1.assignaccessories1();
         // User1.assignOutfit10();
     }
 }
 
-//Test buttons to show functionality (One responsive and one pre-established) (temp)
-
-var cwbutton = document.querySelector("#currentW");
-var cw2button = document.querySelector("#currentW2");
-
-cwbutton.addEventListener("click", currentWeather);
-cw2button.addEventListener("click", currentWeatherTest2);
-
-function currentWeatherTest2(temperatureValue,humidityValue){
-    console.log("Test in weather test function")
-    temperatureValue = 26;
-    humidityValue = 0.1;
-
-    if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 0.25){
-        console.log("test WF2");
-        User1.assignJacket2();
-    }
-    else {
-        console.log("else WF2");
-        User1.assignJacket2();
-    }
-}

@@ -15,7 +15,7 @@ function informationfunction() {
     .then(data => {
         temperatureValue = data['main']['temp'];
         humidityValue = data ['main']['humidity'];
-        DescriptionValue = data['weather'[0]['description']];
+        DescriptionValue = data['weather'][0]['description'];
         console.log("(fetch primary level)Temperature (ºC): " + temperatureValue);
         console.log("(fetch primary level))Description: " + DescriptionValue);
         console.log("(fetch primary level)Humidity (%): " + humidityValue); 

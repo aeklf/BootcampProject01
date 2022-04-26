@@ -33,26 +33,65 @@
     </header>
     
     <body>
+      
         <!-- Preference Input Box -->
         <div class="box" id="prefBox">
             <form> <!-- replace with preference form -->
-                <element id="customText">Customize your clothes recomendations:</element>
-            <div class="input-container">
+                <span class="text-center" id="customText">Customize your clothes recomendations:</span>
+            <!-- Name input -->
                 <div class="boxes">
-                    <span class="catText">Tops</span>
+                  <div class="input-container">
+                    <label for="nameEl"></label>
+                      <div class="input-container">
+                      <input id="nameEl" type="text" required=""/>
+                      <label >Name</label>		
+                  </div>
+                  <!-- Email input -->
+                  <div class="input-container">
+                    <label for="emailEl"></label>
+                      <div class="input-container">
+                      <input id="emailEl" type="text" required=""/>
+                      <label >Email</label>		
+                  </div>
+                  <!-- Home Location input -->
+                  <div class="input-container">
+                    <label for="homeLocationEL"></label>
+                      <div class="input-container">
+                      <input id="homeLocationEl" type="text" required=""/>
+                      <label >Home Location</label>		
+                  </div>
+              
+                  </div>
+                    <!-- Checkbx container -->
+                    <!-- Accessories -->
+                    <span class="catText">Accessories</span>
                     <input type="checkbox" id="box-1">
-                    <label for="box-1">T-Shirts</label>
+                    <label id="sunglasses" for="box-1">Sunglasses</label>
                     <input type="checkbox" id="box-2">
-                    <label for="box-2">Hoodies</label>
-                    <span class="catText">Bottoms</span>
+                    <label id="beanie" for="box-2">Beanie</label>
+                    <!-- Top -->
+                    <span class="catText">Top</span>
                     <input type="checkbox" id="box-3">
-                    <label for="box-3">Jeans</label>
-                    <span class="catText">Shoes</span>
+                    <label id="shirt" for="box-3">Shirt</label>
                     <input type="checkbox" id="box-4">
-                    <label for="box-4">Sneakers</label>
+                    <label id="jacket" for="box-4">Jacket</label>
+                    <!-- Bottom -->
+                    <span class="catText">Bottom</span>
+                    <input type="checkbox" id="box-5">
+                    <label id="jeans" for="box-5">Jeans</label>
+                    <input type="checkbox" id="box-6">
+                    <label id="shorts" for="box-6">Shorts</label>
+                    <!-- Shoes -->
+                    <span class="catText">Footgear</span>
+                    <input type="checkbox" id="box-7">
+                    <label id="sneakers" for="box-7">Sneakers</label>
+                    <input type="checkbox" id="box-8">
+                    <label id="sandals" for="box-8">Sandals</label>
                 </div>
                 <button type="button" id="prefBtn" class="btn"><a href="#">SUBMIT</a></button>
         </form>	
         </div>
     </body>
+    <script src="./userInput.js"></script>
+    
 </html>

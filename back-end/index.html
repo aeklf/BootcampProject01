@@ -3,15 +3,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Test Weather functions</title>
 </head>
 <body>
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8" id="locationinput"></div>
     <button type="button" class="btn" id="locationbtn">Submit</button>
+    <button type="button" id="currentW">Run test for undefined scenario</button>
+    <button type="button" id="currentW2">Run test for scenario 2</button>
+    <div class="main">
+        <div class="outfit"></div>
+        <h2 id="weatherText"></h2>
+        <h2 id="recomText"></h2>
+        <h2 id="topText"></h2>
+        <h2 id="bottomText"></h2>
+        <h2 id="shoesText"></h2>
+        
+    </div>
     <script src="./script1.js"></script>
-    <script src="./apiscript.js"></script>
-    
-    
+    <script src="./api_test.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>   
 
     <!-- // Testing User Input Top -->
     <form>
@@ -39,3 +49,4 @@
     <script src="./userInput.js"></script>
 </body>
 </html>
+

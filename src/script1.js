@@ -17,9 +17,11 @@ function informationfunction() {
         temperatureValue = data['main']['temp'];
         humidityValue = data ['main']['humidity'];
         DescriptionValue = data['weather'][0]['description'];
+        NameValue = data['name'];
         console.log("(fetch primary level)Temperature (ºC): " + temperatureValue);
         console.log("(fetch primary level))Description: " + DescriptionValue);
         console.log("(fetch primary level)Humidity (%): " + humidityValue); 
+        console.log("(fetch primary level)Name: " + NameValue);
         currentWeather(temperatureValue,humidityValue);  
           
     }).catch(error  => {

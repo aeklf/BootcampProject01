@@ -124,9 +124,13 @@ var User1Glasses = {option1:"sunglasses", option2:"cap"};
 var User1Shoes = {option1:"sneakers", option2:"sandals"};
 
 // Test creation for "User" instance.
-
-const User1 = new NewUser(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses),Object.assign(User1Shoes));
-
+function createUser(){
+    var User1Jackets = {option1:"hoodie", option2:"T-shirt"};
+    var User1Pants = {option1:"jeans", option2:"shorts"};
+    var User1Glasses = {option1:"sunglasses", option2:"cap"};
+    var User1Shoes = {option1:"sneakers", option2:"sandals"};
+  const User1 = new NewUser(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses),Object.assign(User1Shoes));
+}
 // API (test) fetch function:  returns variables to be used in outfit assignment function.
 
 var button = document.querySelector('#locationbtn');

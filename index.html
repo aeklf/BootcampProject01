@@ -46,7 +46,8 @@
       
           <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
             <!-- Active: "bg-gray-100", Not Active: "" -->
-            <a href="./about.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">About</a>
+            <a href="./src/about.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">About</a>
+            <a href="./src/preferences.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">User Preferences</a>
           </div>
 
           <!-- Mobile menu, show/hide based on menu state. -->
@@ -81,17 +82,13 @@
             <div class="px-4 py-6 sm:px-0">
               <div class="flex items-center justify-center h-screen bg-blue-100">
                 <div class="box">
-                  <form>
-                    <span class="text-center">Where are you?</span>
-                    <span class="text-centric">Enter your current location or travel destination</span>
-                  <div class="input-container">
-                    <input type="text" id = "location" required=""/>
-                    <label>Location</label>		
-                  </div>
-                    <button type="button" class="btn" id="locationbtn">Submit</button>
-                    <button type="button" class="btn" id="lpBtn"><a href="./preferences.html">Create User</a></button>
-                    <!-- Onclick submit takes you to preferences/customize page and then to the weather/outfit results -->
-                </form>	
+                      <form>
+                        <div class="input-container">
+                        <input type="text" id = "location" required=""/>
+                        <label>Location</label>		
+                        </div>
+                        <button type="button" class="btn" id="locationbtn">Submit</button>
+                    </form>	
                 </div>
           </div>
         </main>
@@ -100,5 +97,7 @@
 
       <!---Linking the javascript file to the html-->
       <script src="./src/script1.js"></script>
+      <script src="./script1.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </html>

@@ -99,6 +99,7 @@ body {
   border-radius: 2px;
   cursor: pointer;
   position: relative;
+  margin-left: 40px;
 }
 
 .input-container input:focus ~ label,

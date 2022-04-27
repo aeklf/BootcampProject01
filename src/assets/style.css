@@ -15,6 +15,12 @@
   font-weight: lighter;
 }
 
+nav {
+  flex: center;
+  justify-content: space-between;
+  background-color: slategray;
+}
+
 body {
   background-image: url(/src/assets/images/weather.gif);
   background-position: top;

@@ -151,6 +151,7 @@ input[type="checkbox"] + label {
   font: 14px/20px "Open Sans", Arial, sans-serif;
   color: #ddd;
   cursor: pointer;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

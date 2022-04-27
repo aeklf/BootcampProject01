@@ -231,3 +231,25 @@ input[type="checkbox"]:checked + label:before {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Style for inserted text */
+
+#weatherText {
+  color: white;
+}
+
+#recomText {
+  color: white;
+}
+
+#topText {
+  color: white;
+}
+
+#bottomText {
+  color: white;
+}
+
+#shoesText {
+  color: white;
+}

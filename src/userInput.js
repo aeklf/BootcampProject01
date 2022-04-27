@@ -16,8 +16,8 @@ var cb7 = document.querySelector('#box-7');
 var cb8 = document.querySelector('#box-8');
 
  // Get User input into an array   
-//  var userList = JSON.parse(localStorage.getItem('UserList')); // this doesn't do anything
- var userList = [localStorage.getItem(JSON.parse('User1'))];
+ // var userListParse = JSON.parse(localStorage.getItem('UserList')); // this doesn't do anything
+ var userList = [];
  
 // Submit form
 

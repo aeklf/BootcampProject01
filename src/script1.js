@@ -1,16 +1,18 @@
 //Test script for back end logic//
 
-localStorage.getItem('User1');
-console.log(User1);
+var test = JSON.parse(localStorage.getItem('User1'));
+
+console.log(test);
+
 
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class NewUser {
     constructor(first, last, email, location, accessories, top, bottom, shoes) {
 
-        // this.first = first;
-        // this.last = last;
-        // this.email = email;
-        // this.location = location;
+        this.first = first;
+        this.last = last;
+        this.email = email;
+        this.location = location;
         this.accessories = accessories;
         this.top = top;
         this.bottom = bottom;
@@ -110,7 +112,7 @@ class NewUser {
         $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
         $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
+        $('#bottomText').html(this.top.rain);
         $('#shoesText').html(this.bottom.option2);
 
     }
@@ -118,7 +120,7 @@ class NewUser {
 
 // Objects with names(according to scenarios(ie. option 1.1 predetermined for rain like conditions)), and values according to user input (wardrobe).
 
-var User1Jackets = {option1:"hoodie", option2:"T-shirt"};
+var User1Jackets = {rain:"hoodie", hot:"T-shirt"};
 var User1Pants = {option1:"jeans", option2:"shorts"};
 var User1Glasses = {option1:"sunglasses", option2:"cap"};
 var User1Shoes = {option1:"sneakers", option2:"sandals"};
@@ -129,7 +131,7 @@ function createUser(){
     var User1Pants = {option1:"jeans", option2:"shorts"};
     var User1Glasses = {option1:"sunglasses", option2:"cap"};
     var User1Shoes = {option1:"sneakers", option2:"sandals"};
-  const User1 = new NewUser(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses),Object.assign(User1Shoes));
+    const User1 = new NewUser(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses),Object.assign(User1Shoes));
 }
 // API (test) fetch function:  returns variables to be used in outfit assignment function.
 

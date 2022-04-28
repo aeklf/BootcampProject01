@@ -56,7 +56,7 @@ body {
 }
 
 #locationIndex {
-  margin-top: 150px;
+  margin-top: 170px;
 }
 
 #indexWeatherDisplay {
@@ -332,18 +332,16 @@ input[type="checkbox"]:checked + label:before {
 #shoesText {
   color: white;
 }
- /**formating for weather display in index*/
+/**formating for weather display in index*/
 
- #namedisp {
- color:white;
- }
+#namedisp {
+  color: white;
+}
 
+#tempdisp {
+  color: white;
+}
 
- #tempdisp {
-  color:white;
- }
-
- #conditiondisp {
-  color:white;
-
- }
+#conditiondisp {
+  color: white;
+}

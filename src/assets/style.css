@@ -333,6 +333,10 @@ input[type="checkbox"]:checked + label:before {
   color: white;
 }
 
+#userText {
+  color: white;
+}
+
 
 
 
@@ -359,4 +363,21 @@ input[type="checkbox"]:checked + label:before {
 
 .infoforbox {
   color:white
+}
+
+#generateOutfit{
+  position: absolute;
+  left: 5rem;
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+#generateHotOutfit{
+  position: absolute;
+  left: 5rem;
+  top: 40rem;
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
 }

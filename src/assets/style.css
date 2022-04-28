@@ -334,6 +334,10 @@ input[type="checkbox"]:checked + label:before {
 }
  /**formating for weather display in index*/
 
+ #indexWeatherDisplay{
+   display: none;
+ }
+
  #namedisp {
  color:white;
  }

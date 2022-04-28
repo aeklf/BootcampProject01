@@ -16,6 +16,8 @@ var condition = document.querySelector('#conditiondisp');
 
 function informationfunction() {
 
+    document.getElementById('indexWeatherDisplay').style.display = "inline";
+
     fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
     .then(data => {

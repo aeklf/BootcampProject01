@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nifty</title>
-        <link href="../dist/output.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/style.css">
+        <link href="../dist/output.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://github.com/aeklf/BootcampProject01/blob/main/dist/output.css" rel="stylesheetGit">
     </head>
 
     <header>
@@ -33,29 +35,21 @@
     </header>
 
     <body>
-        <div id="weatherPage">
+      <div class="sectionLP" id="skills">
+				<ul>
+            <li><span class="contentLP1">01</span></li>
+					<li><span class="contentLP2">02</span></li>
+					<li><span class="contentLP3">03</span></li>
+					<li><span class="contentLP4">04</span></li>
+				</ul>
+		  </div>
 
-          <div id="outfitBox">
-            <div class="outfit"></div>
-          </div>
+      <div class="box" id="boxLP">
+      </div>
 
-         <div class= "flex items-center justify-center h-screen bg-blue-100 box">
-          <input type="text" id = "location" required=""/>
-          <label>Location</label>		
-        </div>
-          <button type="button" class="btn" id="locationbtn">Submit</button>
-              <span id="customText">Here is the weather in your current location:</span>
-              <h2 id="weatherText"></h2>
-              <h2 id="recomText"></h2>
-              <h2 id="topText"></h2>
-              <h2 id="bottomText"></h2>
-              <h2 id="shoesText"></h2>
-              
-          </div>
-
-        </div>
 
         <script src="./script1.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     </body>
+  </html>

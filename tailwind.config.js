@@ -1,11 +1,12 @@
 module.exports = {
   content: [
-    "./src/index.html",
+    "./index.html",
     "./src/script.js",
     "./src/preferences.html",
     ".src/about.html",
     "./src/userinfo.html",
-    "./src/results.html"
+    "./src/results.html",
+    "./src/landingpage.html"
   ],
   presets: [],
   darkMode: 'media', // or 'class'

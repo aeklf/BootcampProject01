@@ -15,6 +15,12 @@
   font-weight: lighter;
 }
 
+nav {
+  flex: center;
+  justify-content: space-between;
+  background-color: slategray;
+}
+
 body {
   background-image: url(/src/assets/images/weather.gif);
   background-position: top;
@@ -64,7 +70,6 @@ body {
   left: 0px;
   font-size: 16px;
   color: #fff;
-  pointer-event: none;
   transition: all 0.5s ease-in-out;
 }
 .input-container input {
@@ -93,6 +98,7 @@ body {
   border-radius: 2px;
   cursor: pointer;
   position: relative;
+  margin-left: 40px;
 }
 
 .input-container input:focus ~ label,
@@ -145,6 +151,7 @@ input[type="checkbox"] + label {
   font: 14px/20px "Open Sans", Arial, sans-serif;
   color: #ddd;
   cursor: pointer;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

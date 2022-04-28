@@ -40,20 +40,14 @@ body {
 }
 
 .box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 60%;
+  left: 10%;
   background-color: rgba(0, 0, 0, 0.89);
   border-radius: 3px;
-  padding: 70px 100px;
-  margin-top: 50px;
+  padding: 70px 50px;
 }
 
-#prefBox {
-  margin-top: 380px;
-  background-color: lightsteelblue;
-}
 
 #locationIndex {
   margin-top: 170px;
@@ -69,6 +63,7 @@ body {
 }
 .input-container label {
   position: absolute;
+  box-sizing: border-box;
   top: 0px;
   left: 0px;
   font-size: 16px;
@@ -136,8 +131,6 @@ html {
 
 .boxes {
   margin: auto;
-  padding: 50px;
-  background: #484848;
 }
 
 /*Checkboxes*/

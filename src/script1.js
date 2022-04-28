@@ -37,6 +37,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.cold);
+        console.log(this.top.cold)
+        console.log(this.bottom.cold)
+        console.log(this.shoes.cold)
+        console.log(this.accessories.cold)
 
     }//T1,H2 (cold,normal)
     assignOutfit4(){
@@ -206,7 +210,7 @@ function currentWeather(temperatureValue,humidityValue){
 
     if(6 < temperatureValue && 13 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 1")
-        //User1.assignOutfit1();
+        User1.assignOutfit1();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 33){

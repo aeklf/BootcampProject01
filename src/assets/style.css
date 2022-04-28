@@ -15,15 +15,7 @@
   font-weight: lighter;
 }
 
-nav {
-  flex: center;
-  justify-content: space-between;
-  background-color: slategray;
-}
-
 body {
-  background-image: url(/src/assets/images/weather.gif);
-  background-position: top;
   background-color: black;
 }
 
@@ -58,6 +50,14 @@ body {
 
 #prefBox {
   margin-top: 120px;
+}
+
+#locationIndex {
+  margin-top: 150px;
+}
+
+#indexWeatherDisplay {
+  margin-top: -85px;
 }
 
 .input-container {

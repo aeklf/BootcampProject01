@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nifty</title>
-        <link href="https://github.com/aeklf/BootcampProject01/blob/main/dist/output.css" rel="stylesheet">
+        <link href="./dist/output.css" rel="stylesheet">
+        <link href="https://github.com/aeklf/BootcampProject01/blob/main/dist/output.css" rel="stylesheetGit">
         <link rel="stylesheet" href="./src/assets/style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
 <body>
@@ -81,15 +83,26 @@
           <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8" id="locationinput">
             <div class="px-4 py-6 sm:px-0">
               <div class="flex items-center justify-center h-screen bg-blue-100">
-                <div class="box">
-                      <form>
-                        <div class="input-container">
-                        <input type="text" id = "location" required=""/>
-                        <label>Location</label>		
+                <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                    <div class="px-4 py-6 sm:px-0">
+                        <div class="box" id="indexWeatherDisplay">
+                        <!-- Weather API Display -->
                         </div>
-                        <button type="button" class="btn" id="locationbtn">Submit</button>
-                    </form>	
+                      </div>
+                    </div>
+                    
+                  <div class="box" id="locationIndex">
+                        <form>
+                          <div class="input-container">
+                          <input type="text" id = "location" required=""/>
+                          <label>Location</label>		
+                          </div>
+                          <button type="button" class="btn" id="locationbtn">Submit</button>
+                      </form>	
+                  </div>
                 </div>
+              </div>
+            </div>
           </div>
         </main>
       </div>

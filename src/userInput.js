@@ -17,7 +17,7 @@ var cb8 = document.querySelector('#box-8');
 
  // Get User input into an array   
  // var userListParse = JSON.parse(localStorage.getItem('UserList')); // this doesn't do anything
- var userList = [];
+ var userList;
  
 // Submit form
 
@@ -93,7 +93,7 @@ if (cb8.checked){
              c1, c2, c3, c4, c5, c6
              );
         if (user.isValid()){
-           userList.push(user);
+           userList = user;
         }else {
             alert('Invalid input')
         }

@@ -2,136 +2,140 @@
 
 var test = JSON.parse(localStorage.getItem('User1'));
 
+var loc = test.name;
+
 console.log(test);
 
 
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class NewUser {
-    constructor(first, last, email, location, accessories, top, bottom, shoes) {
+    constructor(accessories, bottom, email, first, last,  location, shoes, top) {
 
+        this.accessories = accessories;
+        this.bottom = bottom;
+        this.email = email;
         this.first = first;
         this.last = last;
-        this.email = email;
         this.location = location;
-        this.accessories = accessories;
-        this.top = top;
-        this.bottom = bottom;
         this.shoes = shoes;
-      
-    }
+        this.top = top;
 
-    // isValid() {
-    //     if(this.first === "" || this.last === "" || this.email === "" || this.location === ""){
-    //         return false
-    //     } else {
-    //         return true
-    //     }
-    // }
-
+    }//T1,H1 (cold,sunny)
     assignOutfit1(){
         $('.outfit').empty();
         $('#weatherText').html("It is currently very cold and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option1 + ", " + this.top.option1 + " and " + this.bottom.option1);
-        $('#topText').html(this.accessories.option1)
-        $('#bottomText').html(this.top.option1);
-        $('#shoesText').html(this.bottom.option1);
-    }
-    assignOutfit2(){
-        $('.outfit').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
+        $('#recomText').html("We recomend wearing: " + this.accessories.cold + ", " + this.top.cold + " and " + this.bottom.cold);
+        $('#topText').html(this.top.cold);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.cold);
+        $('#accssText').html(this.accessories.cold);
 
-    }
-    assignOutfit3(){
-        $('.outfit').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
-
-    }
+    }//T1,H2 (cold,normal)
     assignOutfit4(){
         $('.outfit').empty();
         $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
-   
-    }
-    assignOutfit5(){
-        $('.outfit').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
- 
-    }
-    assignOutfit6(){
-        $('.outfit').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
-        $('outfit').append(image1)
-    }
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.cold);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.cold);
+        $('#accssText').html(this.accessories.cold);
+
+    }//T1,H3 (cold,rain)
     assignOutfit7(){
         $('.outfit').empty();
         $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.cold);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.cold);
+        $('#accssText').html(this.accessories.cold);
 
-    }
+    }//T2,H1 (normal,sunny)
+    assignOutfit2(){
+        $('.outfit').empty();
+        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.cold);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.cold);
+        $('#accssText').html(this.accessories.hot);
+   
+    }//T2,H2 (normal,normal)
+    assignOutfit5(){
+        $('.outfit').empty();
+        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.cold);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.cold);
+        $('#accssText').html(this.accessories.hot);
+ 
+    }//T2,H3 (normal,rain)
     assignOutfit8(){
         $('.outfit').empty();
         $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
-    }
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.cold);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.cold);
+        $('#accssText').html(this.accessories.hot);
+
+    }//T3,H1 (hot,sunny)
+    assignOutfit3(){
+        $('.outfit').empty();
+        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.hot);
+        $('#bottomText').html(this.bottom.hot);
+        $('#shoesText').html(this.shoes.hot);
+        $('#accssText').html(this.accessories.hot);
+
+    }//T3,H2 (hot,normal)
+    assignOutfit6(){
+        $('.outfit').empty();
+        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.hot);
+        $('#bottomText').html(this.bottom.hot);
+        $('#shoesText').html(this.shoes.hot);
+        $('#accssText').html(this.accessories.hot);
+
+    }//T3,H3 (hot,rain)
     assignOutfit9(){
         $('.outfit').empty();
         $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.option2);
-        $('#shoesText').html(this.bottom.option2);
+        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
+        $('#topText').html(this.top.hot);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.cold);
+        $('#accssText').html(this.accessories.hot);
 
-    }
+    }//T4,H4 (Undefined)
     assignOutfit10(){
         $('.outfit').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.option2 + ", " + this.top.option2 + " and " + this.bottom.option2);
-        $('#topText').html(this.accessories.option2)
-        $('#bottomText').html(this.top.rain);
-        $('#shoesText').html(this.bottom.option2);
-
+        $('#topText').html(this.top.hot);
+        $('#bottomText').html(this.bottom.cold);
+        $('#shoesText').html(this.shoes.hot);
+        $('#accssText').html(this.accessories.cold);
     }
 }
 
 // Objects with names(according to scenarios(ie. option 1.1 predetermined for rain like conditions)), and values according to user input (wardrobe).
 
-var User1Jackets = {rain:"hoodie", hot:"T-shirt"};
-var User1Pants = {option1:"jeans", option2:"shorts"};
-var User1Glasses = {option1:"sunglasses", option2:"cap"};
-var User1Shoes = {option1:"sneakers", option2:"sandals"};
+//(Create) Extract variables from local storage (ie. the selection for cold weather top = CurrWeathPick)
+
+var User1Accessories = {cold:"sunAccessories", hot:"cap"};
+//var User1Top = {cold:CurrWeathPick, hot:"T-shirt"};
+var User1Bottom = {cold:"jeans", hot:"shorts"};
+var User1Shoes = {cold:"sneakers", hot:"sandals"};
 
 // Test creation for "User" instance.
 function createUser(){
-    var User1Jackets = {option1:"hoodie", option2:"T-shirt"};
-    var User1Pants = {option1:"jeans", option2:"shorts"};
-    var User1Glasses = {option1:"sunglasses", option2:"cap"};
-    var User1Shoes = {option1:"sneakers", option2:"sandals"};
-    const User1 = new NewUser(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses),Object.assign(User1Shoes));
+    var User1Top = {cold:"hoodie", hot:"T-shirt"};
+    var User1Bottom = {cold:"jeans", hot:"shorts"};
+    var User1Accessories = {cold:"sunAccessories", hot:"cap"};
+    var User1Shoes = {cold:"sneakers", hot:"sandals"};
+    const User1 = new NewUser(Object.assign(User1Top),Object.assign(User1Bottom),Object.assign(User1Accessories),Object.assign(User1Shoes));
 }
 // API (test) fetch function:  returns variables to be used in outfit assignment function.
 
@@ -147,8 +151,8 @@ function informationfunction() {
     fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
     .then(data => {
-        const User1 = new NewUser(Object.assign(User1Jackets),Object.assign(User1Pants),Object.assign(User1Glasses),Object.assign(User1Shoes));
-        console.log(User1)
+        // const User1 = new NewUser(Object.assign(User1Top),Object.assign(User1Bottom),Object.assign(User1Accessories),Object.assign(User1Shoes));
+        // console.log(User1);
         temperatureValue = data['main']['temp'];
         humidityValue = data ['main']['humidity'];
         DescriptionValue = data['weather'][0]['description'];
@@ -188,63 +192,63 @@ function currentWeather(temperatureValue,humidityValue){
 
     console.log("Test in weather function")
 
-    if(6 < temperatureValue && 13 >= temperatureValue && humidityValue <= 0.25){
+    if(6 < temperatureValue && 13 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 1")
         //User1.assignOutfit1();
-        // User1.assignOutfit1();
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 0.25){
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 2")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue); 
-        // User1.assignOutfit2();
-    }
-
-    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 0.25){
-        console.log("Scenario 3")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignOutfit3();
-    }
-
-    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
-        console.log("Scenario 4")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
         // User1.assignOutfit4();
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 33){
+        console.log("Scenario 3")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        // User1.assignOutfit7();
+    }
+
+    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
+        console.log("Scenario 4")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        // User1.assignOutfit2();
+    }
+
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 5")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
         // User1.assignOutfit5();
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 0.25 && humidityValue < 0.5){
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 6")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignOutfit6();
-    }
-
-    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
-        console.log("Scenario 7")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignOutfit7();
-    }
-
-    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
-        console.log("Scenario 8")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
         // User1.assignOutfit8();
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 0.5 && humidityValue > 0.75){
+    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 66){
+        console.log("Scenario 7")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        // User1.assignOutfit3();
+    }
+
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 66){
+        console.log("Scenario 8")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        // User1.assignOutfit6();
+    }
+
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 9")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
         // User1.assignOutfit9();
     }
     else {
-        console.log("Scenario 10,11 or 12")
-        //User1.assignOutfit1();
-        // User1.assignOutfit10();
+        console.log("Scenario 10")
+        console.log(temperatureValue);
+        console.log(humidityValue);
+        //User1.assignOutfit10();
     }
 }
 

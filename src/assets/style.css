@@ -334,9 +334,19 @@ input[type="checkbox"]:checked + label:before {
 }
 /**formating for weather display in index*/
 
+<<<<<<< HEAD
+ #indexWeatherDisplay{
+   display: none;
+ }
+
+ #namedisp {
+ color:white;
+ }
+=======
 #namedisp {
   color: white;
 }
+>>>>>>> 444fa4569eeefd7b00a06edf0334e2657c9fb55a
 
 #tempdisp {
   color: white;

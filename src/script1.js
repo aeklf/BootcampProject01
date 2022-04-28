@@ -164,7 +164,7 @@ var input = document.querySelector('#location');
 
 function informationfunction() {
 
-    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
+    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
     .then(data => {
         

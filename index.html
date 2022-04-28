@@ -50,6 +50,7 @@
             <!-- Active: "bg-gray-100", Not Active: "" -->
             <a href="./src/about.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">About</a>
             <a href="./src/preferences.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">User Preferences</a>
+            <a href="./calendar.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Calendar</a>
           </div>
 
           <!-- Mobile menu, show/hide based on menu state. -->
@@ -81,10 +82,9 @@
       
         <main>
           <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8" id="locationinput">
-            <div class="px-4 py-6 sm:px-0">
                 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                     <div class="px-4 py-6 sm:px-0">
-                        <div class="box" id="indexWeatherDisplay">
+                        <div id="indexWeatherDisplay">
                         <!-- Weather API Display -->
                         <h1 id="namedisp"></h1>
                         <h1 id="tempdisp"></h1>
@@ -97,7 +97,7 @@
                         <form>
                           <div class="input-container">
                           <input type="text" id = "location" required=""/>
-                          <label>Location</label>		
+                          <label id="locInput">Location</label>		
                           </div>
                           <button type="button" class="btn" id="submitbtn">Submit</button>
                       </form>	

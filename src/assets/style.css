@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: CloudFont;
-  src: url(/src/assets/fonts/webfontkit-20220420-135435/alphasmoke-oox6-webfont.woff);
+  src: url(https://github.com/aeklf/BootcampProject01/tree/main/src/assets/fonts/webfontkit-20220420-135435);
 }
 
 #CloudFont {
@@ -40,19 +40,16 @@ body {
 }
 
 .box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 60%;
+  left: 10%;
   background-color: rgba(0, 0, 0, 0.89);
   border-radius: 3px;
-  padding: 70px 100px;
-  margin-top: 50px;
+  padding: 70px 50px;
 }
 
-#prefBox {
-  margin-top: 380px;
-  background-color: lightsteelblue;
+#locInput {
+  padding-bottom: 5px;
 }
 
 #locationIndex {
@@ -61,6 +58,10 @@ body {
 
 #indexWeatherDisplay {
   margin-top: -85px;
+  padding-left: 800px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .input-container {
@@ -69,6 +70,7 @@ body {
 }
 .input-container label {
   position: absolute;
+  box-sizing: border-box;
   top: 0px;
   left: 0px;
   font-size: 16px;
@@ -110,6 +112,16 @@ body {
   font-size: 12px;
 }
 
+#indexWeatherDisplay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+}
+
 #aboutIcon {
   width: 50%;
   padding-left: 10px;
@@ -136,8 +148,6 @@ html {
 
 .boxes {
   margin: auto;
-  padding: 50px;
-  background: #484848;
 }
 
 /*Checkboxes*/
@@ -333,23 +343,20 @@ input[type="checkbox"]:checked + label:before {
   color: white;
 }
 
+
 #userText {
   color: white;
 }
 
-
-
-
 /**formatting for weather display in index*/
 
- #indexWeatherDisplay{
-   display: none;
- }
+#indexWeatherDisplay {
+  display: none;
+}
 
- #namedisp {
- color:white;
- }
-
+#namedisp {
+  color: white;
+}
 
 #tempdisp {
   color: white;
@@ -362,6 +369,7 @@ input[type="checkbox"]:checked + label:before {
 /*formatting for landing page information inside box*/
 
 .infoforbox {
+
   color:white
 }
 
@@ -381,3 +389,38 @@ input[type="checkbox"]:checked + label:before {
   font-size: 2rem;
   padding: 0.5rem;
 }
+
+
+/* CALENDAR PAGE */
+
+#calendarBody {
+  margin-top: 50px;
+  color: #f1f1f1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#calendarHeader {
+  font-size: x-large;
+  color: aliceblue;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#authorize-button,
+#backBtn {
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+#btnCreateEvents {
+  margin-bottom: 10px;
+}
+
+#divifm {
+  align-items: center;
+  justify-content: flex-start;
+}
+

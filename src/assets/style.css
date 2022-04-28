@@ -48,6 +48,10 @@ body {
   padding: 70px 50px;
 }
 
+#locInput {
+  padding-bottom: 5px;
+}
+
 #locationIndex {
   margin-top: 170px;
 }
@@ -106,6 +110,16 @@ body {
 .input-container input:valid ~ label {
   top: -12px;
   font-size: 12px;
+}
+
+#indexWeatherDisplay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
 }
 
 #aboutIcon {

@@ -2,7 +2,10 @@
 <html class="full" lang="en">
 <head>
     <title>Google Calendar API</title>
-
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://github.com/aeklf/BootcampProject01/blob/main/dist/output.css" rel="stylesheetGit">
+    <link rel="stylesheet" href="./src/assets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/jquery.js" type="text/javascript"></script>
 	
     <script type="text/javascript">
@@ -116,54 +119,74 @@
     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad" type="text/javascript"></script>
 </head>
 
+<div class="min-h-full">
+    <nav class="bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-8 w-8" src="./src/assets/images/icon_nifty.png" alt="icon_nifty">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <header>
+                  <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-3xl font-bold text-gray-900" id="CloudFont">Nifty</h1>
+                  </div>
+                </header>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+</div>
 
 <body>
-   
+    <div id="calendarBody" class="box">
 
-    <!-- Page Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-sm-2 col-xs-12">
-                 <a class="btn" href="src/landingpage.html"> back to app</a>
-                <button id="authorize-button" style="visibility: visible" class="btn btn-primary">
-                    Authorize</button>
-               
-            </div>
-            <!-- .col -->
-            <div class="col-md-10 col-sm-10 col-xs-12">
-                <div class="panel panel-danger" id="result-panel">
-                    <div class="panel-heading">
-                        <h1>
-                            My Calendar</h1>
-                        <h3 class="panel-title" id="result-title">
-                            Application Not Authorized</h3>
-                        &nbsp;
-                    
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <a class="btn" id="backBtn" href="src/landingpage.html"> back to app</a>
+                    <button id="authorize-button" style="visibility: visible" class="btn btn-primary">
+                        Authorize</button>
+                
+                </div>
+                <!-- .col -->
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div class="panel panel-danger" id="result-panel">
+                        <div class="panel-heading">
+                            <h1 id="calendarHeader">
+                                My Calendar</h1>
+                            <h3 class="panel-title" id="result-title">
+                                Application Not Authorized</h3>
+                            &nbsp;
+                        
+                        </div>
                     </div>
-                </div>
 
-                <div> 
-                    <p >Arrival Date</p>
-                    <input id="llegada" type="date" placeholder="" >
-                    <p>Departure Date</p>
-                    <input id="regreso" type="date">
-                    <p>Where are you traveling?</p>
-                    <input id="ubicacion" type="text">
-                </div>
+                    <div> 
+                        <p >Arrival Date</p>
+                        <input id="llegada" type="date" placeholder="" >
+                        <p>Departure Date</p>
+                        <input id="regreso" type="date">
+                        <p>Where are you traveling?</p>
+                        <input id="ubicacion" type="text">
+                    </div>
 
-                       <!--  <input id="txtEventDetails" type="text" /> -->
-                <button id="btnCreateEvents" class="btn btn-primary" onclick="makeApiCall();">
-                    Create Events</button>  				
-                <div id="event-response">
-                </div>
-                <div id="divifm">
-                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FMexico_City&hl=en&src=ZWR3aW5zMDIwNEBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MDI4Mjg0NTA2NDA5MjEzMjk3ODVAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZXMubWV4aWNhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%2333B679&color=%237986CB&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                    
+                        <!--  <input id="txtEventDetails" type="text" /> -->
+                    <button id="btnCreateEvents" class="btn btn-primary" onclick="makeApiCall();">
+                        Create Events</button>  				
+                    <div id="event-response">
+                    </div>
+                    <div id="divifm">
+                        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FMexico_City&hl=en&src=ZWR3aW5zMDIwNEBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MDI4Mjg0NTA2NDA5MjEzMjk3ODVAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZXMubWV4aWNhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%2333B679&color=%237986CB&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
 </body>
 </html>

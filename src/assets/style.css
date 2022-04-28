@@ -17,6 +17,8 @@
 
 body {
   background-color: black;
+  background-image: url(./images/weather.gif);
+  background-position: center;
 }
 
 .text-center {

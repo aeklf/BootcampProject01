@@ -17,6 +17,8 @@
 
 body {
   background-color: black;
+  background-image: url(./images/weather.gif);
+  background-position: center;
 }
 
 .text-center {
@@ -49,7 +51,8 @@ body {
 }
 
 #prefBox {
-  margin-top: 120px;
+  margin-top: 380px;
+  background-color: lightsteelblue;
 }
 
 #locationIndex {

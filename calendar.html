@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<head>
+    <title>Google Calendar API</title>
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+	
+    <script type="text/javascript">
+
+
+        // Google api console clientID and apiKey 
+        var clientId = '558698550021-70i0d7t0m3ljb5fen155tfpaopj391f9.apps.googleusercontent.com';
+        var apiKey = 'AIzaSyCEMDLdcnzI77833Z2j71QKJltbVADvuAk';
+
+        var discoveryDocs =["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
+
+        // enter the scope of current project (this API must be turned on in the Google console)
+        var scopes = ["https://www.googleapis.com/auth/calendar.events"];
+
+        // OAuth2 functions
+        function handleClientLoad() {
+            gapi.client.setApiKey(apiKey);
+            window.setTimeout(checkAuth, 1);
+        }
+
+        function checkAuth() {
+            gapi.auth.authorize({ client_id: clientId, discoveryDocs:discoveryDocs , scope: scopes, immediate: true }, handleAuthResult);
+        }
+
+        // show/hide the 'authorize' button, depending on application state
+        function handleAuthResult(authResult) {
+            var authorizeButton = document.getElementById('authorize-button');
+            var eventButton = document.getElementById('btnCreateEvents');
+            var resultTitle = document.getElementById('result-title');
+
+            if (authResult && !authResult.error) {
+                authorizeButton.style.visibility = 'hidden'; 		// if authorized, hide button
+                resultTitle.innerHTML = 'Application Authorized'		// dis  play 'authorized' text
+                eventButton.style.visibility = 'visible';
+            } else {													// otherwise, show button
+                authorizeButton.style.visibility = 'visible';
+                eventButton.style.visibility = 'hidden';
+                authorizeButton.onclick = handleAuthClick; 			// setup function to handle button click
+            }
+        }
+
+        // function triggered when user authorizes app
+        function handleAuthClick(event) {
+            gapi.auth.authorize({ client_id: clientId, scope: scopes, immediate: false }, handleAuthResult);
+            return false;
+        }
+
+        function refreshICalendarframe() {
+            var iframe = document.getElementById('divifm')
+            iframe.innerHTML = iframe.innerHTML;
+        }
+           
+            
+            // function load the calendar api and make the api call
+        function makeApiCall() {
+            var eventResponse = document.getElementById('event-response');
+           
+            gapi.client.load('calendar', 'v3', function () {					// load the calendar api (version 3)
+                
+                var llegada = $("#llegada").val();
+                var regreso = $("#regreso").val();
+                var ubicacion= $("#ubicacion").val();
+
+                 // setup event details
+                 
+                console.log("llegada:", new Date(llegada).toISOString())
+                var event = {
+                    'summary': "Viaje programado",
+                    'location': ubicacion,
+                    'description': "Viaje a " + ubicacion,
+                    'start': {
+                        'dateTime': new Date(llegada).toISOString(),
+                        'timeZone': 'America/Los_Angeles'
+                    },
+                    'end': {
+                        'dateTime': new Date(regreso).toISOString(),
+                        'timeZone': 'America/Los_Angeles'
+                    },
+                
+                    'reminders': {
+                        'useDefault': true
+                                    }
+                    };
+                   
+
+                var request = gapi.client.calendar.events.insert
+                ({
+                    'calendarId': 'primary', // calendar ID
+                    "resource": event		// pass event details with api call
+                });
+                
+                // handle the response from our api call
+                request.execute(function (resp) {
+                    console.log("Resp: ",resp)
+                    if (resp.status == 'confirmed') {
+                        eventResponse.innerHTML = "Event created successfully. View it <a href='" + resp.htmlLink + "'>online here</a>.";
+                        eventResponse.className += ' panel-success';
+                        refreshICalendarframe();
+                    } else {
+                        document.getElementById('event-response').innerHTML = "There was a problem. Reload page and try again.";
+                        eventResponse.className += ' panel-danger';
+                    }
+                });
+            });
+        }
+      
+
+ 
+
+		</script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad" type="text/javascript"></script>
+</head>
+
+
+<body>
+   
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <button id="back" class="btn btn-primary">
+                    Back to app</button>
+                <button id="authorize-button" style="visibility: visible" class="btn btn-primary">
+                    Authorize</button>
+               
+            </div>
+            <!-- .col -->
+            <div class="col-md-10 col-sm-10 col-xs-12">
+                <div class="panel panel-danger" id="result-panel">
+                    <div class="panel-heading">
+                        <h1>
+                            My Calendar</h1>
+                        <h3 class="panel-title" id="result-title">
+                            Application Not Authorized</h3>
+                        &nbsp;
+                    
+                    </div>
+                </div>
+
+                <div> 
+                    <p >Arrival Date</p>
+                    <input id="llegada" type="date" placeholder="" >
+                    <p>Departure Date</p>
+                    <input id="regreso" type="date">
+                    <p>Where are you traveling?</p>
+                    <input id="ubicacion" type="text">
+                </div>
+
+                       <!--  <input id="txtEventDetails" type="text" /> -->
+                <button id="btnCreateEvents" class="btn btn-primary" onclick="makeApiCall();">
+                    Create Events</button>  				
+                <div id="event-response">
+                </div>
+                <div id="divifm">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FMexico_City&hl=en&src=ZWR3aW5zMDIwNEBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MDI4Mjg0NTA2NDA5MjEzMjk3ODVAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZXMubWV4aWNhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%2333B679&color=%237986CB&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

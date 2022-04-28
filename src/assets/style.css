@@ -332,9 +332,12 @@ input[type="checkbox"]:checked + label:before {
 #shoesText {
   color: white;
 }
-/**formating for weather display in index*/
 
-<<<<<<< HEAD
+
+
+
+/**formatting for weather display in index*/
+
  #indexWeatherDisplay{
    display: none;
  }
@@ -342,11 +345,7 @@ input[type="checkbox"]:checked + label:before {
  #namedisp {
  color:white;
  }
-=======
-#namedisp {
-  color: white;
-}
->>>>>>> 444fa4569eeefd7b00a06edf0334e2657c9fb55a
+
 
 #tempdisp {
   color: white;
@@ -354,4 +353,10 @@ input[type="checkbox"]:checked + label:before {
 
 #conditiondisp {
   color: white;
+}
+
+/*formatting for landing page information inside box*/
+
+.infoforbox {
+  color:white
 }

@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: CloudFont;
-  src: url(/src/assets/fonts/webfontkit-20220420-135435/alphasmoke-oox6-webfont.woff);
+  src: url(https://github.com/aeklf/BootcampProject01/tree/main/src/assets/fonts/webfontkit-20220420-135435);
 }
 
 #CloudFont {

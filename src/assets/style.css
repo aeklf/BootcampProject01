@@ -263,3 +263,18 @@ input[type="checkbox"]:checked + label:before {
 #shoesText {
   color: white;
 }
+ /**formating for weather display in index*/
+
+ #namedisp {
+ color:white;
+ }
+
+
+ #tempdisp {
+  color:white;
+ }
+
+ #conditiondisp {
+  color:white;
+
+ }

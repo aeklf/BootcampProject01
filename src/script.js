@@ -7,6 +7,10 @@ var button = document.querySelector('#submitbtn');
 var temperatureValue;
 var humidityValue;
 var input = document.querySelector('#location');
+///
+var namedisplay = document.querySelector('#namedisp');
+var tempdisplay = document.querySelector('#tempdisp');
+var condition = document.querySelector('#conditiondisp');
 
 // updated extracts location from user input 
 
@@ -25,7 +29,12 @@ function informationfunction() {
         console.log("(fetch primary level))Description: " + DescriptionValue);
         console.log("(fetch primary level)Humidity (%): " + humidityValue); 
         console.log("(fetch primary level)Name: " + NameValue);
-        currentWeather(temperatureValue,humidityValue);  
+      
+        namedisplay.innerHTML = NameValue
+        tempdisplay.innerHTML = "Temperature: " + temperatureValue + " ºC";
+        condition.innerHTML = "Weather condition" + DescriptionValue
+
+
           
     }).catch(error  => {
     console.log(error);

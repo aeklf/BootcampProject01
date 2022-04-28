@@ -125,9 +125,9 @@ class NewUser {
     }//T4,H4 (Undefined)
     assignOutfit10(){
         $('.outfit').empty();
-        $('#topText').html(this.top.hot);
+        $('#topText').html(this.top.cold);
         $('#bottomText').html(this.bottom.cold);
-        $('#shoesText').html(this.shoes.hot);
+        $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.cold);
         console.log(this.top.cold)
         console.log(this.bottom.cold)
@@ -164,7 +164,7 @@ var input = document.querySelector('#location');
 
 function informationfunction() {
 
-    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
+    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
     .then(data => {
         

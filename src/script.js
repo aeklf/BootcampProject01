@@ -32,7 +32,7 @@ function informationfunction() {
       
         namedisplay.innerHTML = NameValue
         tempdisplay.innerHTML = "Temperature: " + temperatureValue + " ºC";
-        condition.innerHTML = "Weather condition" + DescriptionValue
+        condition.innerHTML = "Weather description: " + DescriptionValue
 
 
           

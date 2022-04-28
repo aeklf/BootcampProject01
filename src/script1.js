@@ -41,6 +41,7 @@ class NewUser {
         console.log(this.bottom.cold)
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
+        
 
     }//T1,H2 (cold,normal)
     assignOutfit4(){

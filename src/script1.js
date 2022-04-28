@@ -37,6 +37,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.cold);
+        console.log(this.top.cold)
+        console.log(this.bottom.cold)
+        console.log(this.shoes.cold)
+        console.log(this.accessories.cold)
 
     }//T1,H2 (cold,normal)
     assignOutfit4(){
@@ -125,6 +129,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.hot);
         $('#accssText').html(this.accessories.cold);
+        console.log(this.top.cold)
+        console.log(this.bottom.cold)
+        console.log(this.shoes.cold)
+        console.log(this.accessories.cold)
     }
 }
 
@@ -132,10 +140,10 @@ class NewUser {
 
 //(Create) Extract variables from local storage (ie. the selection for cold weather top = CurrWeathPick)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    var User1Top = {cold:"hoodie", hot:"T-shirt"};
-    var User1Bottom = {cold:"jeans", hot:"shorts"};
-    var User1Accessories = {cold:"sunAccessories", hot:"cap"};
-    var User1Shoes = {cold:"sneakers", hot:"sandals"};
+    var User1Top;
+    var User1Bottom;
+    var User1Accessories;
+    var User1Shoes;
 
 // Test creation for "User" instance.
 function createUser(){
@@ -156,7 +164,7 @@ var input = document.querySelector('#location');
 
 function informationfunction() {
 
-    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
+    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+300+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
     .then(data => {
         
@@ -202,7 +210,7 @@ function currentWeather(temperatureValue,humidityValue){
 
     if(6 < temperatureValue && 13 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 1")
-        //User1.assignOutfit1();
+        User1.assignOutfit1();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 33){

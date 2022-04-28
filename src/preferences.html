@@ -6,91 +6,131 @@
         <title>Nifty</title>
         <link href="../dist/output.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/style.css">
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     </head>
 
-    <header>
-        <div class="min-h-full">
-            <nav class="bg-gray-800">
-              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
-                  <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                      <img class="h-8 w-8" src="assets/images/icon_nifty.png" alt="icon_nifty">
-                    </div>
-                    <div class="hidden md:block">
-                      <div class="ml-10 flex items-baseline space-x-4">
-                        <header>
-                          <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                            <h1 class="text-3xl font-bold text-gray-900" id="CloudFont">Nifty</h1>
-                          </div>
-                        </header>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-              </div>
-            </div>
-    </header>
-    
     <body>
+
+      <div class="min-h-full">
+        <nav class="bg-gray-800">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+              <div class="flex items-center">
+                <div class="flex-shrink-0">
+                  <img class="h-8 w-8" src="assets/images/icon_nifty.png" alt="icon_nifty">
+                </div>
+                <div class="hidden md:block">
+                  <div class="ml-10 flex items-baseline space-x-4">
+                    <header>
+                      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        <h1 class="text-3xl font-bold text-gray-900" id="CloudFont">Nifty</h1>
+                      </div>
+                    </header>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+
       
         <!-- Preference Input Box -->
-        <div class="box" id="prefBox">
+        <div class="box" class="grid grid-cols-2 absolute"> 
+          
+          <div>
             <form> <!-- replace with preference form -->
                 <span class="text-center" id="customText">Customize your clothes recomendations:</span>
             <!-- Name input -->
+            
                 <div class="boxes">
-                  <div class="input-container">
+                  <div class="input-container"> </div>
                     <label for="nameEl"></label>
                       <div class="input-container">
                       <input id="nameEl" type="text" required=""/>
                       <label >Name</label>		
-                  </div>
-                  <!-- Email input -->
-                  <div class="input-container">
-                    <label for="emailEl"></label>
-                      <div class="input-container">
-                      <input id="emailEl" type="text" required=""/>
-                      <label >Email</label>		
-                  </div>
+                     </div>
+                </div>
                   <!-- Home Location input -->
-                  <div class="input-container">
+
+                  <div class="input-container"> 
                     <label for="homeLocationEL"></label>
                       <div class="input-container">
                       <input id="homeLocationEl" type="text" required=""/>
                       <label >Home Location</label>		
                   </div>
-              
-                  </div>
+                </div>
+                  <span class="text-white">Hot Weather Preference</span>
                     <!-- Checkbx container -->
                     <!-- Accessories -->
+                <div>
                     <span class="catText">Accessories</span>
                     <input type="checkbox" id="box-1">
                     <label id="sunglasses" for="box-1">Sunglasses</label>
                     <input type="checkbox" id="box-2">
-                    <label id="beanie" for="box-2">Beanie</label>
+                    <label id="hat" for="box-2">Hat</label>
                     <!-- Top -->
                     <span class="catText">Top</span>
                     <input type="checkbox" id="box-3">
-                    <label id="shirt" for="box-3">Shirt</label>
+                    <label id="shirt" for="box-3">T-shirt</label>
                     <input type="checkbox" id="box-4">
-                    <label id="jacket" for="box-4">Jacket</label>
+                    <label id="tanktop" for="box-4">Tank top</label>
                     <!-- Bottom -->
                     <span class="catText">Bottom</span>
                     <input type="checkbox" id="box-5">
-                    <label id="jeans" for="box-5">Jeans</label>
+                    <label id="gymshorts" for="box-5">Gym shorts</label>
                     <input type="checkbox" id="box-6">
                     <label id="shorts" for="box-6">Shorts</label>
                     <!-- Shoes -->
                     <span class="catText">Footgear</span>
                     <input type="checkbox" id="box-7">
-                    <label id="sneakers" for="box-7">Sneakers</label>
+                    <label id="crocs" for="box-7">Crocs</label>
                     <input type="checkbox" id="box-8">
                     <label id="sandals" for="box-8">Sandals</label>
                 </div>
-                <button type="button" id="prefBtn" class="btn"><a href=".src/landingpage.html">SUBMIT</a></button>
-        </form>	
-        </div>
+                
+                
+        
+        </div>    
+
+       <div>
+          <!-- replace with preference form -->
+          
+    
+                  <!-- Checkbx container -->
+                  <!-- Accessories -->
+                 <div class="mt-3">
+                   <h1 class="text-white">Cold Weather Preference</h1>
+                 </div>
+                  <div>
+                  
+                  <span class="catText">Accessories</span>
+                  <input type="checkbox" id="box-9">
+                  <label id="earmuffs" for="box-9">Ear muffs</label>
+                  <input type="checkbox" id="box-10">
+                  <label id="beanie" for="box-10">Beanie</label>
+                  <!-- Top -->
+                  <span class="catText">Top</span>
+                  <input type="checkbox" id="box-11">
+                  <label id="raincoat" for="box-11">Raincoat</label>
+                  <input type="checkbox" id="box-12">
+                  <label id="jacket" for="box-12">Jacket</label>
+                  <!-- Bottom -->
+                  <span class="catText">Bottom</span>
+                  <input type="checkbox" id="box-13">
+                  <label id="jeans" for="box-13">Jeans</label>
+                  <input type="checkbox" id="box-14">
+                  <label id="joggers" for="box-14">Joggers</label>
+                  <!-- Shoes -->
+                  <span class="catText">Footgear</span>
+                  <input type="checkbox" id="box-15">
+                  <label id="sneakers" for="box-15">Sneakers</label>
+                  <input type="checkbox" id="box-16">
+                  <label id="boots" for="box-16">Boots</label>
+
+              </div>
+              <button type="button" id="prefBtn" class="btn"><a href="#">SUBMIT</a></button>
+      </form>	
+    </div>
     </body>
     <script src="./userInput.js"></script>
     

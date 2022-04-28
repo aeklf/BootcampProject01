@@ -15,16 +15,10 @@
   font-weight: lighter;
 }
 
-nav {
-  flex: center;
-  justify-content: space-between;
-  background-color: slategray;
-}
-
 body {
-  background-image: url(/src/assets/images/weather.gif);
-  background-position: top;
   background-color: black;
+  background-image: url(./images/weather.gif);
+  background-position: center;
 }
 
 .text-center {
@@ -57,7 +51,16 @@ body {
 }
 
 #prefBox {
-  margin-top: 120px;
+  margin-top: 380px;
+  background-color: lightsteelblue;
+}
+
+#locationIndex {
+  margin-top: 170px;
+}
+
+#indexWeatherDisplay {
+  margin-top: -85px;
 }
 
 .input-container {
@@ -217,6 +220,75 @@ input[type="checkbox"]:checked + label:before {
   justify-content: center;
 }
 
+/* LANDING PAGE */
+#skills ul {
+  width: 80%;
+  margin: 5% auto;
+}
+
+#skills li {
+  width: 33.5vw;
+  height: 33.5vw;
+  background: #484848;
+  opacity: 90%;
+  display: inline-block;
+}
+
+#skills li span {
+  display: block;
+  font-size: 5vw;
+  line-height: 30vw;
+  text-align: center;
+}
+
+#boxLP {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 766px) {
+  #skills li:nth-child(-n + 2) {
+    margin-bottom: 4%;
+  }
+  #skills li:nth-child(odd) {
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #skills ul {
+    width: 80%;
+  }
+  #skills li {
+    width: 16.75vw;
+    height: 16.75vw;
+    margin: 1%;
+  }
+
+  #skills li span {
+    font-size: 3vw;
+    line-height: 15vw;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #skills ul {
+    width: 70%;
+  }
+
+  #skills li {
+    width: 14.75vw;
+    height: 14.75vw;
+    max-width: 217px;
+    max-height: 217px;
+  }
+
+  #skills li {
+    font-size: 4.25vw;
+    line-height: 9.75vw;
+  }
+}
+
 /* SCROLLBAR */
 
 /* width */
@@ -261,4 +333,30 @@ input[type="checkbox"]:checked + label:before {
   color: white;
 }
 
+
+
+
+/**formating for weather display in index*/
+
+
+ #indexWeatherDisplay{
+   display: none;
+ }
+
+ #namedisp {
+ color:white;
+ }
+
+#namedisp {
+  color: white;
+}
+
+
+#tempdisp {
+  color: white;
+}
+
+#conditiondisp {
+  color: white;
+}
 

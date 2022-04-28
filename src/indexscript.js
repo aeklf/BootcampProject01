@@ -1,22 +1,11 @@
-
-
-
-
-var button = document.querySelector('#submitbtn');
-
+var button = document.querySelector('#locationbtn');
 var temperatureValue;
 var humidityValue;
 var input = document.querySelector('#location');
-///
-var namedisplay = document.querySelector('#namedisp');
-var tempdisplay = document.querySelector('#tempdisp');
-var condition = document.querySelector('#conditiondisp');
 
 // updated extracts location from user input 
 
 function informationfunction() {
-
-    document.getElementById('indexWeatherDisplay').style.display = "inline";
 
     fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
     .then(response => response.json())
@@ -31,19 +20,14 @@ function informationfunction() {
         console.log("(fetch primary level))Description: " + DescriptionValue);
         console.log("(fetch primary level)Humidity (%): " + humidityValue); 
         console.log("(fetch primary level)Name: " + NameValue);
-      
-        namedisplay.innerHTML = NameValue
-        tempdisplay.innerHTML = "Temperature: " + temperatureValue + " ºC";
-        condition.innerHTML = "Weather description: " + DescriptionValue
-
-
+        currentWeather(temperatureValue,humidityValue);  
           
     }).catch(error  => {
     console.log(error);
 })
     
     console.log("Test in fetch (secondary level)");
-    
+    returnFun();  
     
 }
 

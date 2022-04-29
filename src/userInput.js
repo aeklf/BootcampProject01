@@ -2,7 +2,6 @@
 var userForm = document.querySelector('#UserForm');
 var nameEl = document.querySelector('#nameEl');
 var emailEl = document.querySelector('#emailEl');
-// var homeLocation = document.querySelector('#homeLocationEl');
 var prefBtn = document.querySelector('#prefBtn');
 
 // Checkbox variables
@@ -35,74 +34,76 @@ function handleFormSubmit (event) {
 
     
 // Determine whether Accessories box is checked
- if (cb1.checked) {
-     var c1 = document.querySelector('#sunglasses').textContent;
-     console.log(c1)
- }
- if (cb2.checked) {
-     var c2 = document.querySelector('#hat').textContent;
-     console.log(c2);
- }
-//  Determine whether Top box is checked
- if (cb3.checked) {
-     var c3 = document.querySelector('#shirt').textContent;
-     console.log(c3)
- }
- if (cb4.checked){
-     var c4 = document.querySelector('#tanktop').textContent;
-     console.log(c4);
- }
- // Determine whether Bottom box is checked
- if (cb5.checked){
-     var c5 = document.querySelector('#gymshorts').textContent;
-     console.log(c5)
- }
- if (cb6.checked){
-     var c6 = document.querySelector('#shorts').textContent;
-     console.log(c6)
- }
+if (cb1.checked) {
+    var c1 = cb1.value
+    console.log(c1)
+}
+if (cb2.checked) {
+    var c2 = cb2.value
+    console.log(c2)
+}
 
- if (cb7.checked){
-    var c7 = document.querySelector('#crocs').textContent;
-    console.log(c7)
+if (cb3.checked) {
+    var c3 = cb3.value
+    console.log(c3)
 }
-if (cb8.checked){
-    var c8 = document.querySelector('#sandals').textContent;
-    console.log(c8)
+if (cb4.checked){
+    var c4 = cb4.value;
+    console.log(c4)
+}
 
+if (cb5.checked){
+    var c5 = cb5.value;
+    console.log(c5)
 }
-if (cb9.checked){
-    var c9 = document.querySelector('#earmuffs').textContent;
-    console.log(c9)
-    
-}
-if (cb10.checked){
-    var c10 = document.querySelector('#beanie').textContent;
-    console.log(c10)
-}
-if (cb11.checked){
-    var c11 = document.querySelector('#raincoat').textContent;
-    console.log(c11)
-}
-if (cb12.checked){
-    var c12 = document.querySelector('#jacket').textContent;
-    console.log(c12)
-}
-if (cb13.checked){
-    var c13 = document.querySelector('#jeans').textContent;
-    console.log(c13)
-}
-if (cb14.checked){
-    var c14 = document.querySelector('#joggers').textContent;
+if (cb6.checked){
+    var c6 = cb6.value;
     console.log(c6)
 }
+
+if (cb7.checked){
+   var c7 = cb7.value;
+   console.log(c7)
+}
+if (cb8.checked){
+   var c8 = cb8.value
+   console.log(c8)
+
+   
+// Cold weather preferences
+}
+if (cb9.checked){
+   var c9 = cb9.value;
+   console.log(c9)
+   
+}
+if (cb10.checked){
+   var c10 = cb10.value;
+   console.log(c10)
+}
+if (cb11.checked){
+   var c11 = cb11.value;
+   console.log(c11)
+}
+if (cb12.checked){
+   var c12 = cb12.value;
+   console.log(c12)
+}
+if (cb13.checked){
+   var c13 = cb13.value;
+   console.log(c13)
+}
+if (cb14.checked){
+   var c14 = cb14.value;
+   console.log(c14)
+}
 if (cb15.checked){
-    var c15 = document.querySelector('#sneakers').textContent;
-    console.log(c15)
+   var c15 = cb15.value;
+   console.log(c15)
 }
 if (cb16.checked){
-    var c16 = document.querySelector('#boots').textContent;
-    console.log(c16)
+   var c16 = cb16.value;
+   console.log(c16)
 }
                         // accessories, top, bottom, shoes
     // New User input
@@ -113,7 +114,6 @@ if (cb16.checked){
               coldacc1, coldacc2, coldtop1, coldtop2, coldbottom1, coldbottom2, coldshoes1, coldshoes2) {
 
             this.name = name;
-            
             this.accessories1 = accessories1;
             this.accessories2 = accessories2;
             this.top1 = top1;
@@ -151,18 +151,34 @@ if (cb16.checked){
         if (user.isValid()){
            userList = user;
         }else {
-            alert('Invalid input') // will replace with module
+            logo =  document.querySelector('#logo');
+            logo.scrollIntoView();
+            nameEl.style.backgroundColor = '#a52a2a';
         }
         
         localStorage.setItem('User1', JSON.stringify(userList));
-        
+        location.href = "./landingpage.html";
 }
    
 
 // WHEN I click on user button, THEN the input saves in local storage
 prefBtn.addEventListener('click', handleFormSubmit);
 
+// WHEN name input is invalid and red, remove color
+nameEl.addEventListener('click', function(){
+    nameEl.style.backgroundColor = '';
+})
 
+//  Function to cleardata
+clearBtn.addEventListener('click', function(){
+cleardata();
+
+function cleardata() {
+    
+        localStorage.clear();
+        location.reload();
+    }
+});
 
 
 

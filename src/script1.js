@@ -476,13 +476,13 @@ function currentWeather(temperatureValue,humidityValue){
         User1.assignOutfit7();
     }
 
-    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 66){
+    else if(13 < temperatureValue && 24 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 8")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         User1.assignOutfit8();
     }
 
-    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 66){
+    else if(24 < temperatureValue && 33 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 9")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         User1.assignOutfit9();

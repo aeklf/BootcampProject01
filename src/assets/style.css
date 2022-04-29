@@ -330,44 +330,61 @@ input[type="checkbox"]:checked + label:before {
 #weatherText {
   color: white;
   position: relative;
-  left: 50%;
+  left: 25%;
+  font-size: 2.5rem;
 }
 
 #recomText {
   color: white;
   position: relative;
-  left: 50%;
+  left: 25%;
+  font-size: 2.5rem;
 }
 
 #topText {
   color: white;
   position: relative;
-  left: 50%;
+  left: 25%;
+  font-size: 2.5rem;
 }
 
 #bottomText {
   color: white;
   position: relative;
-  left: 50%;
+  left: 25%;
+  font-size: 2.5rem;
 }
 
 #shoesText {
   color: white;
   position: relative;
-  left: 50%;
+  left: 25%;
+  font-size: 2.5rem;
 }
 
 #accssText {
   color: white;
   position: relative;
-  left: 50%;
+  left: 25%;
+  font-size: 2.5rem;
 }
 
 
 #userText {
   color: white;
   position: relative;
-  left: 50%;
+  left: 25%;
+  font-size: 2.5rem;
+  max-width: 70%;
+}
+
+#submitbtn {
+  font-size: 1.5rem;
+  background-color: cadetblue;
+}
+
+#location {
+  font-size: 1.5rem;
 }
 
 /**formatting for weather display in index*/

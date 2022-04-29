@@ -163,6 +163,9 @@ class NewUser {
     assignOutfit1(){
 
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Hey " + this.username + ". " + "It is pretty cold right now, but its also pretty sunny you should try wearing: ")
         $('#topText').html("A nice warm " + this.top.cold + ",");
@@ -180,6 +183,9 @@ class NewUser {
     }//T1,H2 (cold,normal)
     assignOutfit4(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Hello " + this.username + ". " + "It is pretty cold  and a little cloudy, you should keep it safe with: ")
         $('#topText').html("A cool " + this.top.cold + ",");
@@ -194,6 +200,9 @@ class NewUser {
     }//T1,H3 (cold,rain)
     assignOutfit7(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Hey " + this.username + ". " + "It is pretty cold right now, and it looks like it might rain, you should go with: ")
         $('#topText').html("A nice warm " + this.top.cold + ",");
@@ -210,6 +219,9 @@ class NewUser {
     }//T2,H1 (normal,sunny)
     assignOutfit2(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Good to see you " + this.username + ". " + "it's warm but not too bad, though its pretty sunny, go with some: ")
         $('#topText').html("Chill " + this.top.hot + ",");
@@ -224,6 +236,9 @@ class NewUser {
     }//T2,H2 (normal,normal)
     assignOutfit5(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Good to see you " + this.username + ". " + "it's warm but not too bad, kinda cloudy, keep it safe with: ")
         $('#topText').html("Chill " + this.top.hot + ",");
@@ -238,6 +253,9 @@ class NewUser {
     }//T2,H3 (normal,rain)
     assignOutfit8(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("hey " + this.username + ". " + "it's warm but not too bad, it looks like it might rain, keep it safe with: ")
         $('#topText').html("A good old " + this.top.cold + ",");
@@ -252,6 +270,9 @@ class NewUser {
     }//T3,H1 (hot,sunny)
     assignOutfit3(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Hi " + this.username + ". " + "it's pretty hot out there, and it is quite suuny, you should wear: ")
         $('#topText').html("A good old " + this.top.hot + ",");
@@ -266,6 +287,9 @@ class NewUser {
     }//T3,H2 (hot,normal)
     assignOutfit6(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Hi " + this.username + ". " + "it's pretty hot out there, and partially clouded, you should wear: ")
         $('#topText').html("A good old " + this.top.hot + ",");
@@ -280,6 +304,9 @@ class NewUser {
     }//T3,H3 (hot,rain)
     assignOutfit9(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#userText').html("Hi " + this.username + ". " + "it's pretty hot out there, but it's also very cloudy, go with: ")
         $('#topText').html("A nice " + this.top.hot + ",");
@@ -295,6 +322,9 @@ class NewUser {
     }//T4,H4 (Undefined)
     assignOutfit10(){
         $('.contentLP1').empty();
+        $('.contentLP2').empty();
+        $('.contentLP3').empty();
+        $('.contentLP4').empty();
         $('#topText').html("A comfortable " + this.top.hot + ",");
         $('#bottomText').html("some reliable " + this.bottom.cold + ",");
         $('#shoesText').html("a pair of sturdy " + this.shoes.cold + ",");
@@ -320,6 +350,11 @@ class NewUser {
     var User1Accessories;
     var User1Shoes;
 
+    var User2Top;
+    var User2Bottom;
+    var User2Accessories;
+    var User2Shoes;
+
 // Test creation for "User" instance. accessories, bottom, shoes, top, username, location
 function createUser(){
 
@@ -329,6 +364,18 @@ function createUser(){
     var User1Shoes = {cold:lsshoecold2, hot:lsshoe2};
 
     User1 = new NewUser(Object.assign(User1Accessories),Object.assign(User1Bottom),Object.assign(User1Shoes),Object.assign(User1Top), userName);
+
+}
+
+// Test creation for "User" instance. accessories, bottom, shoes, top, username, location
+function createUser2(){
+
+    var User2Accessories = {cold:lsaccold, hot:"Hat"};
+    var User2Top = {cold:lstopcold, hot:lstophot};
+    var User2Bottom = {cold:lsbotcold, hot:lsbothot};
+    var User2Shoes = {cold:lsshoecold, hot:lsshoe};
+
+    User2 = new NewUser(Object.assign(User2Accessories),Object.assign(User2Bottom),Object.assign(User2Shoes),Object.assign(User2Top), userName);
 
 }
 // API (test) fetch function:  returns variables to be used in outfit assignment function.
@@ -393,55 +440,55 @@ function currentWeather(temperatureValue,humidityValue){
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 2")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue); 
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue); 
         User1.assignOutfit2();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 3")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         User1.assignOutfit3();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 4")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         User1.assignOutfit4();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 5")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         $('#topText').html(User1.top.cold);
         User1.assignOutfit5();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 6")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         User1.assignOutfit6();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 7")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         console.log(User1);
         User1.assignOutfit7();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 8")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         User1.assignOutfit8();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 9")
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         User1.assignOutfit9();
     }
     else {
-        $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
         console.log("Scenario 10");
         console.log(temperatureValue);
         console.log(humidityValue);

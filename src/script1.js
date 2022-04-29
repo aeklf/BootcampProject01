@@ -174,10 +174,10 @@ class NewUser {
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
 
-        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
-        document.querySelector(".contentLP2").appendChild(bootsimage);
-        document.querySelector(".contentLP3").appendChild(Hatimage);
-        document.querySelector(".contentLP4").appendChild(sneakersimage);
+        document.querySelector(".contentLP1").appendChild(earmuffsimage);
+        document.querySelector(".contentLP2").appendChild(jacketimage);
+        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
         
        
         
@@ -190,6 +190,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.cold);
+        document.querySelector(".contentLP1").appendChild(earmuffsimage);
+        document.querySelector(".contentLP2").appendChild(jacketimage);
+        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
 
     }//T1,H3 (cold,rain)
     assignOutfit7(){
@@ -201,6 +205,12 @@ class NewUser {
         $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
         $('#accssText').html("and maybe a " + this.accessories.cold + ".");
 
+        document.querySelector(".contentLP1").appendChild(earmuffsimage);
+        document.querySelector(".contentLP2").appendChild(jacketimage);
+        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
+
+
     }//T2,H1 (normal,sunny)
     assignOutfit2(){
         $('.contentLP1').empty();
@@ -210,7 +220,11 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.hot);
-   
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(jacketimage);
+        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
+
     }//T2,H2 (normal,normal)
     assignOutfit5(){
         $('.contentLP1').empty();
@@ -220,6 +234,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.hot);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(bootsimage);
+        document.querySelector(".contentLP3").appendChild(Hatimage);
+        document.querySelector(".contentLP4").appendChild(sneakersimage);
  
     }//T2,H3 (normal,rain)
     assignOutfit8(){
@@ -230,6 +248,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.hot);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(bootsimage);
+        document.querySelector(".contentLP3").appendChild(Hatimage);
+        document.querySelector(".contentLP4").appendChild(sneakersimage);
 
     }//T3,H1 (hot,sunny)
     assignOutfit3(){
@@ -240,6 +262,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.hot);
         $('#shoesText').html(this.shoes.hot);
         $('#accssText').html(this.accessories.hot);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(tshirtimage);
+        document.querySelector(".contentLP3").appendChild(gymshortsimage);
+        document.querySelector(".contentLP4").appendChild(crocsimage);
 
     }//T3,H2 (hot,normal)
     assignOutfit6(){
@@ -250,6 +276,10 @@ class NewUser {
         $('#bottomText').html(this.bottom.hot);
         $('#shoesText').html(this.shoes.hot);
         $('#accssText').html(this.accessories.hot);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(tshirtimage);
+        document.querySelector(".contentLP3").appendChild(gymshortsimage);
+        document.querySelector(".contentLP4").appendChild(crocsimage);
 
     }//T3,H3 (hot,rain)
     assignOutfit9(){
@@ -260,6 +290,11 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.hot);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(tshirtimage);
+        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
+
 
     }//T4,H4 (Undefined)
     assignOutfit10(){
@@ -273,6 +308,10 @@ class NewUser {
         console.log(this.bottom.cold)
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
+        document.querySelector(".contentLP1").appendChild(earmuffsimage);
+        document.querySelector(".contentLP2").appendChild(jacketimage);
+        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP4").appendChild(sneakersimage);
     }
 }
 

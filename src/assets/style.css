@@ -46,6 +46,7 @@ body {
   background-color: rgba(0, 0, 0, 0.89);
   border-radius: 3px;
   padding: 70px 50px;
+  
 }
 
 #locInput {
@@ -254,6 +255,8 @@ input[type="checkbox"]:checked + label:before {
 
 #boxLP {
   margin-top: 100px;
+  
+  
 }
 
 @media screen and (max-width: 766px) {
@@ -479,10 +482,3 @@ align-items: center;
     flex-wrap:wrap ;
   }
 
- #boxLP {
-   
-   justify-content: center;
-   align-items: center;
-   display: flex;
-  
- }

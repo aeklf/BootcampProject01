@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: CloudFont;
-  src: url(https://github.com/aeklf/BootcampProject01/tree/main/src/assets/fonts/webfontkit-20220420-135435);
+  src: url(./fonts/webfontkit-20220420-135435/alphasmoke-oox6-webfont.woff);
 }
 
 #CloudFont {
@@ -351,14 +351,17 @@ input[type="checkbox"]:checked + label:before {
 
 #namedisp {
   color: white;
+  text-align: center;
 }
 
 #tempdisp {
   color: white;
+  text-align: center;
 }
 
 #conditiondisp {
   color: white;
+  text-align: center;
 }
 
 /*formatting for landing page information inside box*/

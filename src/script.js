@@ -11,6 +11,7 @@ var input = document.querySelector('#location');
 var namedisplay = document.querySelector('#namedisp');
 var tempdisplay = document.querySelector('#tempdisp');
 var condition = document.querySelector('#conditiondisp');
+var createWardrobe = document.querySelector('#createWardrobe');
 
 // updated extracts location from user input 
 
@@ -50,3 +51,4 @@ function informationfunction() {
 // Button: runs main fetch function. 
 
 button.addEventListener('click', informationfunction);
+

@@ -19,7 +19,7 @@ var lsachot;
         console.log(lsachot);
     }
 
-    var User1Accessories = {cold:lsaccold2, hot:"lsachot"};
+    var User1Accessories = {cold:lsaccold2, hot:lsachot};
     var User1Top = {cold:lstopcold2, hot:lstophot2};
     var User1Bottom = {cold:lsbotcold2, hot:lsbothot2};
     var User1Shoes = {cold:lsshoecold2, hot:lsshoe2};
@@ -50,48 +50,7 @@ var lstophot2 = UserExt.top2;
 
 var userName = UserExt.name;
 
-console.log(lsachot);
-console.log(lsbothot);
-
-console.log('1')
-
-console.log(lsaccold);
-console.log(lsbotcold);
-
-console.log('2')
-
-console.log(lsshoecold);
-console.log(lstopcold);
-
-console.log('3')
-
-console.log(lsshoe);
-console.log(lstophot);
-
-console.log('4')
-
-console.log(lsshoe2);
-console.log(lstophot2);
-
-console.log('5')
-
-console.log(lsbothot2);
-console.log(lsbotcold2);
-
-console.log('6')
-
-console.log(lsshoecold2);
-console.log(lstopcold2);
-
-console.log('7')
-
-console.log(userName);
-
-console.log('8')
-
 var User1;
-
-   
 
 //////////creating image variables for each item of clothing
 var Sunglassesimage = document.createElement("img");
@@ -151,13 +110,6 @@ class NewUser {
         this.location = location;
         this.shoes = shoes;
         this.top = top;
-
-        // this.accessories2 = accessories2;
-        // this.bottom2 = bottom2;
-        // this.shoes2 = shoes2;
-        // this.top2 = top2;
-
-
 
     }//T1,H1 (cold,sunny)
     assignOutfit1(){
@@ -278,7 +230,7 @@ class NewUser {
         $('#topText').html("A good old " + this.top.hot + ",");
         $('#bottomText').html("Some " + this.bottom.hot + ",");
         $('#shoesText').html("A good pair of " + this.shoes.hot + ",");
-        $('#accssText').html("and a " + this.accessories.hot + ".");
+        $('#accssText').html("and  " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(tshirtimage);
         document.querySelector(".contentLP3").appendChild(gymshortsimage);
@@ -295,8 +247,8 @@ class NewUser {
         $('#topText').html("A good old " + this.top.hot + ",");
         $('#bottomText').html("Some " + this.bottom.hot + ",");
         $('#shoesText').html("A good pair of " + this.shoes.hot + ",");
-        $('#accssText').html("and a " + this.accessories.hot + ".");
-        document.querySelector(".contentLP1").appendChild(Hatimage);
+        $('#accssText').html("and  " + this.accessories.hot + ".");
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(tanktopimage);
         document.querySelector(".contentLP3").appendChild(gymshortsimage);
         document.querySelector(".contentLP4").appendChild(crocsimage);
@@ -330,10 +282,6 @@ class NewUser {
         $('#shoesText').html("a pair of sturdy " + this.shoes.cold + ",");
         $('#accssText').html("and of course " + this.accessories.hot + ".");
         $('#userText').html("Sorry " + this.username + " I'm not sure about the weather right now, just go with: ")
-        console.log(this.top.cold)
-        console.log(this.bottom.cold)
-        console.log(this.shoes.cold)
-        console.log(this.accessories.cold)
         document.querySelector(".contentLP1").appendChild(earmuffsimage);
         document.querySelector(".contentLP2").appendChild(jacketimage);
         document.querySelector(".contentLP3").appendChild(jeansimage);

@@ -386,6 +386,11 @@ input[type="checkbox"]:checked + label:before {
   background-color: cadetblue;
 }
 
+#submitbtn2 {
+  font-size: 1.5rem;
+  background-color: cadetblue;
+}
+
 #location {
   font-size: 1.5rem;
 }

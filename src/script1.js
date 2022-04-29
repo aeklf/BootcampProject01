@@ -358,7 +358,7 @@ class NewUser {
 // Test creation for "User" instance. accessories, bottom, shoes, top, username, location
 function createUser(){
 
-    var User1Accessories = {cold:lsaccold2, hot:"Hat"};
+    var User1Accessories = {cold:lsaccold2, hot:"Sunglasses"};
     var User1Top = {cold:lstopcold2, hot:lstophot2};
     var User1Bottom = {cold:lsbotcold2, hot:lsbothot2};
     var User1Shoes = {cold:lsshoecold2, hot:lsshoe2};
@@ -425,7 +425,7 @@ function returnFun(){
 
 //Function for interpreting variables from API fetch, used for assignment of wardrobe options.
 
-//Temperature ranges: <6, 6-13, 13-20, 20-27, >27.
+//Temperature ranges: <6, 6-13, 13-24, 24-33, >33.
 //Humidity ranges: <25%, 25-50%, 50-75%, >75%.
 
 function currentWeather(temperatureValue,humidityValue){
@@ -496,10 +496,99 @@ function currentWeather(temperatureValue,humidityValue){
     }
 }
 
-var createButton2 = document.querySelector("#generateHotOutfit")
+function informationfunction2() {
 
-createButton2.addEventListener('click',function(){
-    temperatureValue = 25;
-    humidityValue = 5;
-    currentWeather();
-});
+    fetch ('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e&units=metric')
+    .then(response => response.json())
+    .then(data => {
+        
+        temperatureValue = data['main']['temp'];
+        humidityValue = data ['main']['humidity'];
+        DescriptionValue = data['weather'][0]['description'];
+        NameValue = data['name'];
+        console.log("(fetch primary level)Temperature (ºC): " + temperatureValue);
+        console.log("(fetch primary level))Description: " + DescriptionValue);
+        console.log("(fetch primary level)Humidity (%): " + humidityValue); 
+        console.log("(fetch primary level)Name: " + NameValue);
+        currentWeather2(temperatureValue,humidityValue);  
+          
+    }).catch(error  => {
+    console.log(error);
+})
+    
+    console.log("Test in fetch (secondary level)");
+    returnFun();  
+    
+}
+
+function currentWeather2(temperatureValue,humidityValue){
+
+    console.log("Test in weather function");
+    createUser2();
+
+    if(6 < temperatureValue && 13 >= temperatureValue && humidityValue < 33){
+        console.log("Scenario 1")
+        User2.assignOutfit1();
+    }
+
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 33){
+        console.log("Scenario 2")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue); 
+        User2.assignOutfit2();
+    }
+
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 33){
+        console.log("Scenario 3")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        User2.assignOutfit3();
+    }
+
+    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
+        console.log("Scenario 4")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        User2.assignOutfit4();
+    }
+
+    else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
+        console.log("Scenario 5")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        $('#topText').html(User2.top.cold);
+        User2.assignOutfit5();
+    }
+
+    else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
+        console.log("Scenario 6")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        User2.assignOutfit6();
+    }
+
+    else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 66){
+        console.log("Scenario 7")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        console.log(User2);
+        User2.assignOutfit7();
+    }
+
+    else if(13 < temperatureValue && 24 >= temperatureValue && humidityValue >= 66){
+        console.log("Scenario 8")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        User2.assignOutfit8();
+    }
+
+    else if(24 < temperatureValue && 33 >= temperatureValue && humidityValue >= 66){
+        console.log("Scenario 9")
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        User2.assignOutfit9();
+    }
+    else {
+        $('#weatherText').html("Temperature (ºC): " + temperatureValue + " humidity (%): " + humidityValue);
+        console.log("Scenario 10");
+        console.log(temperatureValue);
+        console.log(humidityValue);
+        User2.assignOutfit10();
+    }
+}
+
+var button2 = document.querySelector('#submitbtn2');
+
+button2.addEventListener('click',informationfunction2);

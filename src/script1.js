@@ -156,16 +156,11 @@ class NewUser {
         console.log(this.bottom.cold)
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
-<<<<<<< HEAD
 
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         
        
         
-=======
-        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
-
->>>>>>> 10b7c0941eb34d73ea803a555e9acf9aa8d56d84
     }//T1,H2 (cold,normal)
     assignOutfit4(){
         $('.contentLP1').empty();

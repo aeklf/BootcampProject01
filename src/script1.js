@@ -163,16 +163,12 @@ class NewUser {
     assignOutfit1(){
 
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very cold and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.cold + ", " + this.top.cold + " and " + this.bottom.cold);
-        $('#topText').html(this.top.cold);
-        $('#bottomText').html(this.bottom.cold);
-        $('#shoesText').html(this.shoes.cold);
-        $('#accssText').html(this.accessories.cold);
-        console.log(this.top.cold)
-        console.log(this.bottom.cold)
-        console.log(this.shoes.cold)
-        console.log(this.accessories.cold)
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("Hey " + this.username + ". " + "It is pretty cold right now, but its also pretty sunny you should try wearing: ")
+        $('#topText').html("A nice warm " + this.top.cold + ",");
+        $('#bottomText').html("Some comfy " + this.bottom.cold + ",");
+        $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
+        $('#accssText').html("and maybe a " + this.accessories.hot + ".");
 
         document.querySelector(".contentLP1").appendChild(earmuffsimage);
         document.querySelector(".contentLP2").appendChild(jacketimage);
@@ -184,12 +180,12 @@ class NewUser {
     }//T1,H2 (cold,normal)
     assignOutfit4(){
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
-        $('#topText').html(this.top.cold);
-        $('#bottomText').html(this.bottom.cold);
-        $('#shoesText').html(this.shoes.cold);
-        $('#accssText').html(this.accessories.cold);
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("Hello " + this.username + ". " + "It is pretty cold  and a little cloudy, you should keep it safe with: ")
+        $('#topText').html("A cool " + this.top.cold + ",");
+        $('#bottomText').html("Some nice " + this.bottom.cold + ",");
+        $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
+        $('#accssText').html("and maybe a " + this.accessories.cold + ".");
         document.querySelector(".contentLP1").appendChild(earmuffsimage);
         document.querySelector(".contentLP2").appendChild(jacketimage);
         document.querySelector(".contentLP3").appendChild(jeansimage);
@@ -199,7 +195,7 @@ class NewUser {
     assignOutfit7(){
         $('.contentLP1').empty();
         // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#userText').html("Hey " + this.username + ". " + "It is pretty cold right now, and it looks like it might rain, you should try wearing: ")
+        $('#userText').html("Hey " + this.username + ". " + "It is pretty cold right now, and it looks like it might rain, you should go with: ")
         $('#topText').html("A nice warm " + this.top.cold + ",");
         $('#bottomText').html("Some comfy " + this.bottom.cold + ",");
         $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
@@ -214,12 +210,12 @@ class NewUser {
     }//T2,H1 (normal,sunny)
     assignOutfit2(){
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
-        $('#topText').html(this.top.cold);
-        $('#bottomText').html(this.bottom.cold);
-        $('#shoesText').html(this.shoes.cold);
-        $('#accssText').html(this.accessories.hot);
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("Good to see you " + this.username + ". " + "it's warm but not too bad, though its pretty sunny, go with some: ")
+        $('#topText').html("Chill " + this.top.hot + ",");
+        $('#bottomText').html("Some cool " + this.bottom.cold + ",");
+        $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
+        $('#accssText').html("and a " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(jacketimage);
         document.querySelector(".contentLP3").appendChild(jeansimage);
@@ -228,12 +224,12 @@ class NewUser {
     }//T2,H2 (normal,normal)
     assignOutfit5(){
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
-        $('#topText').html(this.top.cold);
-        $('#bottomText').html(this.bottom.cold);
-        $('#shoesText').html(this.shoes.cold);
-        $('#accssText').html(this.accessories.hot);
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("Good to see you " + this.username + ". " + "it's warm but not too bad, kinda cloudy, keep it safe with: ")
+        $('#topText').html("Chill " + this.top.hot + ",");
+        $('#bottomText').html("Some cool " + this.bottom.cold + ",");
+        $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
+        $('#accssText').html("and a " + this.accessories.cold + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(bootsimage);
         document.querySelector(".contentLP3").appendChild(Hatimage);
@@ -242,12 +238,12 @@ class NewUser {
     }//T2,H3 (normal,rain)
     assignOutfit8(){
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
-        $('#topText').html(this.top.cold);
-        $('#bottomText').html(this.bottom.cold);
-        $('#shoesText').html(this.shoes.cold);
-        $('#accssText').html(this.accessories.hot);
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("hey " + this.username + ". " + "it's warm but not too bad, it looks like it might rain, keep it safe with: ")
+        $('#topText').html("A good old " + this.top.cold + ",");
+        $('#bottomText').html("Some " + this.bottom.cold + ",");
+        $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
+        $('#accssText').html("and a " + this.accessories.cold + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(bootsimage);
         document.querySelector(".contentLP3").appendChild(Hatimage);
@@ -256,12 +252,12 @@ class NewUser {
     }//T3,H1 (hot,sunny)
     assignOutfit3(){
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
-        $('#topText').html(this.top.hot);
-        $('#bottomText').html(this.bottom.hot);
-        $('#shoesText').html(this.shoes.hot);
-        $('#accssText').html(this.accessories.hot);
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("Hi " + this.username + ". " + "it's pretty hot out there, and it is quite suuny, you should wear: ")
+        $('#topText').html("A good old " + this.top.hot + ",");
+        $('#bottomText').html("Some " + this.bottom.hot + ",");
+        $('#shoesText').html("A good pair of " + this.shoes.hot + ",");
+        $('#accssText').html("and a " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(tshirtimage);
         document.querySelector(".contentLP3").appendChild(gymshortsimage);
@@ -270,12 +266,12 @@ class NewUser {
     }//T3,H2 (hot,normal)
     assignOutfit6(){
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
-        $('#topText').html(this.top.hot);
-        $('#bottomText').html(this.bottom.hot);
-        $('#shoesText').html(this.shoes.hot);
-        $('#accssText').html(this.accessories.hot);
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("Hi " + this.username + ". " + "it's pretty hot out there, and partially clouded, you should wear: ")
+        $('#topText').html("A good old " + this.top.hot + ",");
+        $('#bottomText').html("Some " + this.bottom.hot + ",");
+        $('#shoesText').html("A good pair of " + this.shoes.hot + ",");
+        $('#accssText').html("and a " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(tshirtimage);
         document.querySelector(".contentLP3").appendChild(gymshortsimage);
@@ -284,12 +280,12 @@ class NewUser {
     }//T3,H3 (hot,rain)
     assignOutfit9(){
         $('.contentLP1').empty();
-        $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
-        $('#recomText').html("We recomend wearing: " + this.accessories.hot + ", " + this.top.hot + " and " + this.bottom.hot);
-        $('#topText').html(this.top.hot);
-        $('#bottomText').html(this.bottom.cold);
-        $('#shoesText').html(this.shoes.cold);
-        $('#accssText').html(this.accessories.hot);
+        // $('#weatherText').html("It is currently very hot and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
+        $('#userText').html("Hi " + this.username + ". " + "it's pretty hot out there, but it's also very cloudy, go with: ")
+        $('#topText').html("A nice " + this.top.hot + ",");
+        $('#bottomText').html("Some " + this.bottom.cold + ",");
+        $('#shoesText').html("A pair of " + this.shoes.cold + ",");
+        $('#accssText').html("and a " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(tshirtimage);
         document.querySelector(".contentLP3").appendChild(jeansimage);
@@ -398,19 +394,19 @@ function currentWeather(temperatureValue,humidityValue){
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 2")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue); 
-        User1.assignOutfit4();
+        User1.assignOutfit2();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 3")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        User1.assignOutfit7();
+        User1.assignOutfit3();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 4")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        User1.assignOutfit2();
+        User1.assignOutfit4();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
@@ -423,20 +419,20 @@ function currentWeather(temperatureValue,humidityValue){
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 6")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        User1.assignOutfit8();
+        User1.assignOutfit6();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 7")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
         console.log(User1);
-        User1.assignOutfit3();
+        User1.assignOutfit7();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 8")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        User1.assignOutfit6();
+        User1.assignOutfit8();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 66){

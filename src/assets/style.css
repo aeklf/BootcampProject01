@@ -325,27 +325,45 @@ input[type="checkbox"]:checked + label:before {
 
 #weatherText {
   color: white;
+  position: relative;
+  left: 50%;
 }
 
 #recomText {
   color: white;
+  position: relative;
+  left: 50%;
 }
 
 #topText {
   color: white;
+  position: relative;
+  left: 50%;
 }
 
 #bottomText {
   color: white;
+  position: relative;
+  left: 50%;
 }
 
 #shoesText {
   color: white;
+  position: relative;
+  left: 50%;
+}
+
+#accssText {
+  color: white;
+  position: relative;
+  left: 50%;
 }
 
 
 #userText {
   color: white;
+  position: relative;
+  left: 50%;
 }
 
 /**formatting for weather display in index*/
@@ -356,10 +374,13 @@ input[type="checkbox"]:checked + label:before {
 
 #namedisp {
   color: white;
+  position: relative;
+  left: 50%;
 }
 
 #tempdisp {
   color: white;
+  
 }
 
 #conditiondisp {

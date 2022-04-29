@@ -85,8 +85,14 @@ class NewUser {
         this.shoes2 = shoes2;
         this.top2 = top2;
 
+
+
     }//T1,H1 (cold,sunny)
     assignOutfit1(){
+
+        var imagen1 = new Image();
+        imagen1.src = ('./src/assets/images/hoodie.png');
+
         $('.outfit').empty();
         $('#weatherText').html("It is currently very cold and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
         $('#recomText').html("We recomend wearing: " + this.accessories.cold + ", " + this.top.cold + " and " + this.bottom.cold);
@@ -94,12 +100,13 @@ class NewUser {
         $('#bottomText').html(this.bottom.cold);
         $('#shoesText').html(this.shoes.cold);
         $('#accssText').html(this.accessories.cold);
+        $('.contentLP1').append(imagen1);
         console.log(this.top.cold)
         console.log(this.bottom.cold)
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
         
-
+        
     }//T1,H2 (cold,normal)
     assignOutfit4(){
         $('.outfit').empty();

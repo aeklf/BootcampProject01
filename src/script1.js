@@ -6,6 +6,24 @@ var UserExt = JSON.parse(localStorage.getItem('User1'));
 console.log(UserExt.accessories1);
 console.log(UserExt.accessories2);
 
+var lsachot;
+
+    if(UserExt.accessories1 === "Sunglasses"){
+        console.log("Assign acc hot sung");
+        lsachot = "Sunglasses";
+        console.log(lsachot);
+    }
+    else{
+        console.log("Assign acc hot hat");
+        lsachot = "Hat";
+        console.log(lsachot);
+    }
+
+    var User1Accessories = {cold:lsaccold2, hot:lsachot};
+    var User1Top = {cold:lstopcold2, hot:lstophot2};
+    var User1Bottom = {cold:lsbotcold2, hot:lsbothot2};
+    var User1Shoes = {cold:lsshoecold2, hot:lsshoe2};
+
 var lsachot = UserExt.accessories1;
 var lsachot2 = UserExt.accessories2;
 
@@ -73,6 +91,8 @@ console.log('8')
 
 var User1;
 
+   
+
 //////////creating image variables for each item of clothing
 var Sunglassesimage = document.createElement("img");
 Sunglassesimage.src = "./assets/images/sunglasses.png";
@@ -123,7 +143,7 @@ var bootsimage = document.createElement("img");
 bootsimage.src = "http://path/to/image";
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class NewUser {
-    constructor(accessories, bottom, shoes, top, username, accessories2, bottom2, shoes2, top2 ) {
+    constructor(accessories, bottom, shoes, top, username) {
 
         this.accessories = accessories;
         this.bottom = bottom;
@@ -132,18 +152,15 @@ class NewUser {
         this.shoes = shoes;
         this.top = top;
 
-        this.accessories2 = accessories2;
-        this.bottom2 = bottom2;
-        this.shoes2 = shoes2;
-        this.top2 = top2;
+        // this.accessories2 = accessories2;
+        // this.bottom2 = bottom2;
+        // this.shoes2 = shoes2;
+        // this.top2 = top2;
 
 
 
     }//T1,H1 (cold,sunny)
     assignOutfit1(){
-
-        var imagen1 = new Image();
-        imagen1.src = ('./src/assets/images/hoodie.png');
 
         $('.contentLP1').empty();
         $('#weatherText').html("It is currently very cold and sunny: temperature(ºC) " + temperatureValue + ", cloudiness (%): " + humidityValue + ".");
@@ -264,10 +281,6 @@ class NewUser {
     var User1Bottom;
     var User1Accessories;
     var User1Shoes;
-    var User2Top;
-    var User2Bottom;
-    var User2Accessories;
-    var User2Shoes;
 
 // Test creation for "User" instance. accessories, bottom, shoes, top, username, location
 function createUser(){
@@ -275,16 +288,9 @@ function createUser(){
     var User1Accessories = {cold:lsaccold2, hot:lsachot};
     var User1Top = {cold:lstopcold2, hot:lstophot2};
     var User1Bottom = {cold:lsbotcold2, hot:lsbothot2};
-    var User1Shoes = {cold:lsshoecold2, hot:lsshoe2}; 
+    var User1Shoes = {cold:lsshoecold2, hot:lsshoe2};
 
-    var User2Accessories = {cold:lsaccold, hot:lsachot2};
-    var User2Top = {cold:lstopcold, hot:lstophot};
-    var User2Bottom = {cold:lsbotcold, hot:lsbothot};
-    var User2Shoes = {cold:lsshoecold, hot:lsshoe}; 
-
-    User1 = new NewUser(Object.assign(User1Accessories),Object.assign(User1Bottom),Object.assign(User1Shoes),Object.assign(User1Top), userName ,Object.assign(User2Accessories),Object.assign(User2Bottom),Object.assign(User2Shoes),Object.assign(User2Top));
-
-    User2 = new NewUser(Object.assign(User2Accessories),Object.assign(User2Bottom),Object.assign(User2Shoes),Object.assign(User2Top),userName);
+    User1 = new NewUser(Object.assign(User1Accessories),Object.assign(User1Bottom),Object.assign(User1Shoes),Object.assign(User1Top), userName);
 
 }
 // API (test) fetch function:  returns variables to be used in outfit assignment function.
@@ -350,19 +356,19 @@ function currentWeather(temperatureValue,humidityValue){
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 2")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue); 
-        // User1.assignOutfit4();
+        User1.assignOutfit4();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue < 33){
         console.log("Scenario 3")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        User1.assignOutfit3();
+        User1.assignOutfit7();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 4")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignOutfit2();
+        User1.assignOutfit2();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
@@ -375,26 +381,26 @@ function currentWeather(temperatureValue,humidityValue){
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 33 && humidityValue < 66){
         console.log("Scenario 6")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignOutfit8();
+        User1.assignOutfit8();
     }
 
     else if(6 < temperatureValue && 13 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 7")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
         console.log(User1);
-        User1.assignOutfit7();
+        User1.assignOutfit3();
     }
 
     else if(13 < temperatureValue && 20 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 8")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignOutfit6();
+        User1.assignOutfit6();
     }
 
     else if(20 < temperatureValue && 27 >= temperatureValue && humidityValue >= 66){
         console.log("Scenario 9")
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
-        // User1.assignOutfit9();
+        User1.assignOutfit9();
     }
     else {
         $('#weatherText').html("Temperature (ºC): " + temperatureValue + "humidity (%): " + humidityValue);
@@ -404,10 +410,6 @@ function currentWeather(temperatureValue,humidityValue){
         User1.assignOutfit10();
     }
 }
-
-var createButton = document.querySelector("#generateOutfit")
-
-createButton.addEventListener('click',informationfunction);
 
 var createButton2 = document.querySelector("#generateHotOutfit")
 

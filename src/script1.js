@@ -210,7 +210,7 @@ function createUser(){
 }
 // API (test) fetch function:  returns variables to be used in outfit assignment function.
 
-var button = document.querySelector('#locationbtn');
+var button = document.querySelector('#submitbtn');
 var temperatureValue;
 var humidityValue;
 var input = document.querySelector('#location');

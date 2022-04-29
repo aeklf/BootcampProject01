@@ -2,6 +2,7 @@
 
 var UserExt = JSON.parse(localStorage.getItem('User1'));
 ///////////////////////////////////////////////////////////////////////////////////////////
+// if (UserExt.accessories1 == )
 var lsachot = UserExt.accessories1;
 var lsachot2 = UserExt.accessories2;
 

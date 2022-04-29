@@ -3,6 +3,7 @@
 var UserExt = JSON.parse(localStorage.getItem('User1'));
 ///////////////////////////////////////////////////////////////////////////////////////////
 var lsachot = UserExt.accessories1;
+var lsachot2 = UserExt.accessories2;
 
 var lsbothot = UserExt.bottom1;
 var lsbothot2 = UserExt.bottom2;
@@ -10,22 +11,21 @@ var lsbothot2 = UserExt.bottom2;
 var lsaccold = UserExt.coldacc1;
 var lsaccold2 = UserExt.coldacc2;
 
-var lsbotcol = UserExt.coldbottom1;
-var lsbotcol2 = UserExt.coldbottom2;
+var lsbotcold = UserExt.coldbottom1;
+var lsbotcold2 = UserExt.coldbottom2;
 
-var lsshoecol = UserExt.coldshoes1;
-var lsshoecol2 = UserExt.coldshoes2;
+var lsshoecold = UserExt.coldshoes1;
+var lsshoecold2 = UserExt.coldshoes2;
 
-var lstopcol = UserExt.coldtop1;
-var lstopcol2 = UserExt.coldtop2;
+var lstopcold = UserExt.coldtop1;
+var lstopcold2 = UserExt.coldtop2;
 
-var lsshoe1 = UserExt.shoes1;
+var lsshoe = UserExt.shoes1;
 var lsshoe2 = UserExt.shoes2;
 
 var lstophot = UserExt.top1;
 var lstophot2 = UserExt.top2;
 
-var userloc = UserExt.location;
 var userName = UserExt.name;
 
 console.log(lsachot);
@@ -34,16 +34,16 @@ console.log(lsbothot);
 console.log('1')
 
 console.log(lsaccold);
-console.log(lsbotcol);
+console.log(lsbotcold);
 
 console.log('2')
 
-console.log(lsshoecol);
-console.log(lstopcol);
+console.log(lsshoecold);
+console.log(lstopcold);
 
 console.log('3')
 
-console.log(lsshoe1);
+console.log(lsshoe);
 console.log(lstophot);
 
 console.log('4')
@@ -54,16 +54,15 @@ console.log(lstophot2);
 console.log('5')
 
 console.log(lsbothot2);
-console.log(lsbotcol2);
+console.log(lsbotcold2);
 
 console.log('6')
 
-console.log(lsshoecol2);
-console.log(lstopcol2);
+console.log(lsshoecold2);
+console.log(lstopcold2);
 
 console.log('7')
 
-console.log(userloc);
 console.log(userName);
 
 console.log('8')
@@ -120,7 +119,7 @@ var bootsimage = document.createElement("img");
 bootsimage.src = "http://path/to/image";
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class NewUser {
-    constructor(accessories, bottom, shoes, top, username, location) {
+    constructor(accessories, bottom, shoes, top, username, accessories2, bottom2, shoes2, top2 ) {
 
         this.accessories = accessories;
         this.bottom = bottom;
@@ -128,6 +127,11 @@ class NewUser {
         this.location = location;
         this.shoes = shoes;
         this.top = top;
+
+        this.accessories2 = accessories2;
+        this.bottom2 = bottom2;
+        this.shoes2 = shoes2;
+        this.top2 = top2;
 
     }//T1,H1 (cold,sunny)
     assignOutfit1(){
@@ -248,14 +252,28 @@ class NewUser {
     var User1Bottom;
     var User1Accessories;
     var User1Shoes;
+    var User2Top;
+    var User2Bottom;
+    var User2Accessories;
+    var User2Shoes;
 
 // Test creation for "User" instance. accessories, bottom, shoes, top, username, location
 function createUser(){
+
     var User1Accessories = {cold:lsaccold2, hot:lsachot};
-    var User1Top = {cold:lstopcol2, hot:lstophot2};
-    var User1Bottom = {cold:lsbotcol2, hot:lsbothot2};
-    var User1Shoes = {cold:lsshoecol2, hot:lsshoe2}; 
-    User1 = new NewUser(Object.assign(User1Accessories),Object.assign(User1Bottom),Object.assign(User1Shoes),Object.assign(User1Top),userName,location);
+    var User1Top = {cold:lstopcold2, hot:lstophot2};
+    var User1Bottom = {cold:lsbotcold2, hot:lsbothot2};
+    var User1Shoes = {cold:lsshoecold2, hot:lsshoe2}; 
+
+    var User2Accessories = {cold:lsaccold, hot:lsachot2};
+    var User2Top = {cold:lstopcold, hot:lstophot};
+    var User2Bottom = {cold:lsbotcold, hot:lsbothot};
+    var User2Shoes = {cold:lsshoecold, hot:lsshoe}; 
+
+    User1 = new NewUser(Object.assign(User1Accessories),Object.assign(User1Bottom),Object.assign(User1Shoes),Object.assign(User1Top), userName ,Object.assign(User2Accessories),Object.assign(User2Bottom),Object.assign(User2Shoes),Object.assign(User2Top));
+
+    User2 = new NewUser(Object.assign(User2Accessories),Object.assign(User2Bottom),Object.assign(User2Shoes),Object.assign(User2Top),userName);
+
 }
 // API (test) fetch function:  returns variables to be used in outfit assignment function.
 

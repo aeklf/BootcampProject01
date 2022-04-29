@@ -77,7 +77,7 @@ var Hatimage = document.createElement("img");
 Hatimage.src = "http://path/to/image";
 
 var tshirtimage = document.createElement("img");
-tshirtimage.src = "http://path/to/image";
+tshirtimage.src = "./assets/images/tShirt.png";
 
 var tanktopimage = document.createElement("img");
 tanktopimage.src = "http://path/to/image";
@@ -98,7 +98,7 @@ var earmuffsimage = document.createElement("img");
 earmuffsimage.src = "http://path/to/image";
 
 var beanieimage = document.createElement("img");
-beanieimage.src = "http://path/to/image";
+beanieimage.src = "./assets/images/beanie.png";
 
 var raincoatimage = document.createElement("img");
 raincoatimage.src = "http://path/to/image";
@@ -153,14 +153,11 @@ class NewUser {
         console.log(this.bottom.cold)
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
-<<<<<<< HEAD
-        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
 
-=======
-        $('.contentLP').append(Sunglassesimage);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         
+       
         
->>>>>>> 762214886a5607f4473d2061591ee62e462acb91
     }//T1,H2 (cold,normal)
     assignOutfit4(){
         $('.outfit').empty();

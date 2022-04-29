@@ -98,49 +98,49 @@ var Sunglassesimage = document.createElement("img");
 Sunglassesimage.src = "./assets/images/sunglasses.png";
 
 var Hatimage = document.createElement("img");
-Hatimage.src = "http://path/to/image";
+Hatimage.src = "./assets/images/hat.png";
 
 var tshirtimage = document.createElement("img");
 tshirtimage.src = "./assets/images/tShirt.png";
 
 var tanktopimage = document.createElement("img");
-tanktopimage.src = "http://path/to/image";
+tanktopimage.src = "./assets/images/tanktop.png";
 
 var gymshortsimage = document.createElement("img");
-gymshortsimage.src = "http://path/to/image";
+gymshortsimage.src = "./assets/images/gymshorts.png";
 
 var shortsimage = document.createElement("img");
-shortsimage.src = "http://path/to/image";
+shortsimage.src = "./assets/images/shorts.png";
 
 var crocsimage = document.createElement("img");
-crocsimage.src = "http://path/to/image";
+crocsimage.src = "./assets/images/crocs.png";
 
 var sandalsimage = document.createElement("img");
-sandalsimage.src = "http://path/to/image";
+sandalsimage.src = "./assets/images/sandals.png";
 
 var earmuffsimage = document.createElement("img");
-earmuffsimage.src = "http://path/to/image";
+earmuffsimage.src = "./assets/images/earmuffs.png";
 
 var beanieimage = document.createElement("img");
 beanieimage.src = "./assets/images/beanie.png";
 
 var raincoatimage = document.createElement("img");
-raincoatimage.src = "http://path/to/image";
+raincoatimage.src = "./assets/images/raincoat.png";
 
 var jacketimage = document.createElement("img");
-jacketimage.src = "http://path/to/image";
+jacketimage.src = "./assets/images/jacket.png";
 
 var jeansimage = document.createElement("img");
-jeansimage.src = "http://path/to/image";
+jeansimage.src = "./assets/images/jeans.png";
 
 var joggersimage = document.createElement("img");
-joggersimage.src = "http://path/to/image";
+joggersimage.src = "./assets/images/joggers.png";
 
 var sneakersimage = document.createElement("img");
-sneakersimage.src = "http://path/to/image";
+sneakersimage.src = "./assets/images/sneakers.png";
 
 var bootsimage = document.createElement("img");
-bootsimage.src = "http://path/to/image";
+bootsimage.src = "./assets/images/boots.png";
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class NewUser {
     constructor(accessories, bottom, shoes, top, username) {
@@ -175,6 +175,9 @@ class NewUser {
         console.log(this.accessories.cold)
 
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP3").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP4").appendChild(Sunglassesimage);
         
        
         

@@ -105,7 +105,7 @@ if (cb16.checked){
    var c16 = cb16.value;
    console.log(c16)
 }
-                        // accessories, top, bottom, shoes
+
     // New User input
     class NewUser {
         constructor(name,
@@ -132,9 +132,9 @@ if (cb16.checked){
             this.coldshoes2 = coldshoes2;
           
         }
-    // Check if has information user input
+    // Check if user input has information
         isValid() {
-            if(this.name === ""){
+            if(this.name == ""){
                 return false
             } else {
                 return true
@@ -150,6 +150,7 @@ if (cb16.checked){
              
         if (user.isValid()){
            userList = user;
+           location.href = "./landingpage.html";
         }else {
             logo =  document.querySelector('#logo');
             logo.scrollIntoView();
@@ -157,7 +158,6 @@ if (cb16.checked){
         }
         
         localStorage.setItem('User1', JSON.stringify(userList));
-        location.href = "./landingpage.html";
 }
    
 
@@ -167,7 +167,7 @@ prefBtn.addEventListener('click', handleFormSubmit);
 // WHEN name input is invalid and red, remove color
 nameEl.addEventListener('click', function(){
     nameEl.style.backgroundColor = '';
-})
+});
 
 //  Function to cleardata
 clearBtn.addEventListener('click', function(){

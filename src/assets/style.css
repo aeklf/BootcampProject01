@@ -343,6 +343,11 @@ input[type="checkbox"]:checked + label:before {
   color: white;
 }
 
+
+#userText {
+  color: white;
+}
+
 /**formatting for weather display in index*/
 
 #indexWeatherDisplay {
@@ -364,8 +369,27 @@ input[type="checkbox"]:checked + label:before {
 /*formatting for landing page information inside box*/
 
 .infoforbox {
-  color: white;
+
+  color:white
 }
+
+#generateOutfit{
+  position: absolute;
+  left: 5rem;
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+#generateHotOutfit{
+  position: absolute;
+  left: 5rem;
+  top: 40rem;
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
 
 /* CALENDAR PAGE */
 
@@ -399,3 +423,4 @@ input[type="checkbox"]:checked + label:before {
   align-items: center;
   justify-content: flex-start;
 }
+

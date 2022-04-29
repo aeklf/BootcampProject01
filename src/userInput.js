@@ -2,7 +2,7 @@
 var userForm = document.querySelector('#UserForm');
 var nameEl = document.querySelector('#nameEl');
 var emailEl = document.querySelector('#emailEl');
-var homeLocation = document.querySelector('#homeLocationEl');
+// var homeLocation = document.querySelector('#homeLocationEl');
 var prefBtn = document.querySelector('#prefBtn');
 
 // Checkbox variables
@@ -70,7 +70,6 @@ if (cb8.checked){
     var c8 = document.querySelector('#sandals').textContent;
     console.log(c8)
 
-
 }
 if (cb9.checked){
     var c9 = document.querySelector('#earmuffs').textContent;
@@ -108,13 +107,13 @@ if (cb16.checked){
                         // accessories, top, bottom, shoes
     // New User input
     class NewUser {
-        constructor(name, location,
+        constructor(name,
              accessories1, accessories2,
               top1, top2, bottom1, bottom2, shoes1, shoes2,
               coldacc1, coldacc2, coldtop1, coldtop2, coldbottom1, coldbottom2, coldshoes1, coldshoes2) {
 
             this.name = name;
-            this.location = location;
+            
             this.accessories1 = accessories1;
             this.accessories2 = accessories2;
             this.top1 = top1;
@@ -135,7 +134,7 @@ if (cb16.checked){
         }
     // Check if has information user input
         isValid() {
-            if(this.name === "" || this.location === ""){
+            if(this.name === ""){
                 return false
             } else {
                 return true
@@ -144,7 +143,6 @@ if (cb16.checked){
     }
     
         var user = new NewUser(nameEl.value,
-             homeLocation.value,
              c1, c2, c3, c4, c5, c6,
              c7, c8, c9, c10, c11, c12, c13,
              c14, c15, c16 

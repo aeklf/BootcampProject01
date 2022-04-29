@@ -69,6 +69,54 @@ console.log('8')
 
 var User1;
 
+//////////creating image variables for each item of clothing
+var Sunglassesimage = document.createElement("img");
+Sunglassesimage.src = "./src/assets/images/sunglasses.png";
+
+var Hatimage = document.createElement("img");
+Hatimage.src = "http://path/to/image";
+
+var tshirtimage = document.createElement("img");
+tshirtimage.src = "http://path/to/image";
+
+var tanktopimage = document.createElement("img");
+tanktopimage.src = "http://path/to/image";
+
+var gymshortsimage = document.createElement("img");
+gymshortsimage.src = "http://path/to/image";
+
+var shortsimage = document.createElement("img");
+shortsimage.src = "http://path/to/image";
+
+var crocsimage = document.createElement("img");
+crocsimage.src = "http://path/to/image";
+
+var sandalsimage = document.createElement("img");
+sandalsimage.src = "http://path/to/image";
+
+var earmuffsimage = document.createElement("img");
+earmuffsimage.src = "http://path/to/image";
+
+var beanieimage = document.createElement("img");
+beanieimage.src = "http://path/to/image";
+
+var raincoatimage = document.createElement("img");
+raincoatimage.src = "http://path/to/image";
+
+var jacketimage = document.createElement("img");
+jacketimage.src = "http://path/to/image";
+
+var jeansimage = document.createElement("img");
+jeansimage.src = "http://path/to/image";
+
+var joggersimage = document.createElement("img");
+joggersimage.src = "http://path/to/image";
+
+var sneakersimage = document.createElement("img");
+sneakersimage.src = "http://path/to/image";
+
+var bootsimage = document.createElement("img");
+bootsimage.src = "http://path/to/image";
 //Class creation to assign wardrobe as parameters and methods as functions for oufit assignment (template for user objects)
 class NewUser {
     constructor(accessories, bottom, shoes, top, username, accessories2, bottom2, shoes2, top2 ) {
@@ -105,6 +153,7 @@ class NewUser {
         console.log(this.bottom.cold)
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
+        $('.contentLP').append(Sunglassesimage);
         
         
     }//T1,H2 (cold,normal)

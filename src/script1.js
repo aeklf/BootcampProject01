@@ -19,7 +19,7 @@ var lsachot;
         console.log(lsachot);
     }
 
-    var User1Accessories = {cold:lsaccold2, hot:lsachot};
+    var User1Accessories = {cold:lsaccold2, hot:"lsachot"};
     var User1Top = {cold:lstopcold2, hot:lstophot2};
     var User1Bottom = {cold:lsbotcold2, hot:lsbothot2};
     var User1Shoes = {cold:lsshoecold2, hot:lsshoe2};
@@ -288,7 +288,7 @@ class NewUser {
 // Test creation for "User" instance. accessories, bottom, shoes, top, username, location
 function createUser(){
 
-    var User1Accessories = {cold:lsaccold2, hot:lsachot};
+    var User1Accessories = {cold:lsaccold2, hot:"Test hat"};
     var User1Top = {cold:lstopcold2, hot:lstophot2};
     var User1Bottom = {cold:lsbotcold2, hot:lsbothot2};
     var User1Shoes = {cold:lsshoecold2, hot:lsshoe2};

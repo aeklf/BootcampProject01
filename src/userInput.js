@@ -22,13 +22,12 @@ var cb14 = document.querySelector('#box-14');
 var cb15 = document.querySelector('#box-15');
 var cb16 = document.querySelector('#box-16');
 
-
- // Get User input into an array   
-//  var userList = JSON.parse(localStorage.getItem('UserList')); // this doesn't do anything
+ // Stores localstorage
  var userList;
  
 // Submit form
 function handleFormSubmit (event) {
+
 // stops from refreshing form
     event.preventDefault(); 
 

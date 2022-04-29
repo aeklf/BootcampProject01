@@ -228,6 +228,7 @@ input[type="checkbox"]:checked + label:before {
   margin-top: 50px;
   align-items: center;
   justify-content: center;
+  
 }
 
 /* LANDING PAGE */
@@ -445,3 +446,43 @@ input[type="checkbox"]:checked + label:before {
   justify-content: flex-start;
 }
 
+.contentLP1 {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.contentLP2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+.contentLP3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+.contentLP4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  #outfitsquares {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap ;
+  }
+
+ #boxLP {
+   
+   justify-content: center;
+   align-items: center;
+   display: flex;
+  
+ }

@@ -175,9 +175,9 @@ class NewUser {
         console.log(this.accessories.cold)
 
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
-        document.querySelector(".contentLP2").appendChild(Sunglassesimage);
-        document.querySelector(".contentLP3").appendChild(Sunglassesimage);
-        document.querySelector(".contentLP4").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(bootsimage);
+        document.querySelector(".contentLP3").appendChild(Hatimage);
+        document.querySelector(".contentLP4").appendChild(sneakersimage);
         
        
         

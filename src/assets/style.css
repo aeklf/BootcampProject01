@@ -46,6 +46,7 @@ body {
   background-color: rgba(0, 0, 0, 0.89);
   border-radius: 3px;
   padding: 70px 50px;
+  
 }
 
 #locInput {
@@ -228,6 +229,7 @@ input[type="checkbox"]:checked + label:before {
   margin-top: 50px;
   align-items: center;
   justify-content: center;
+  
 }
 
 /* LANDING PAGE */
@@ -253,6 +255,8 @@ input[type="checkbox"]:checked + label:before {
 
 #boxLP {
   margin-top: 100px;
+  
+  
 }
 
 @media screen and (max-width: 766px) {
@@ -325,22 +329,79 @@ input[type="checkbox"]:checked + label:before {
 
 #weatherText {
   color: white;
+  position: relative;
+  left: 0;
+  font-size: 2.5rem;
 }
 
 #recomText {
   color: white;
+  position: relative;
+  left: 0;
+  font-size: 2.5rem;
 }
 
 #topText {
   color: white;
+  position: relative;
+  left: 0;
+  font-size: 2.5rem;
 }
 
 #bottomText {
   color: white;
+  position: relative;
+  left: 0;
+  font-size: 2.5rem;
 }
 
 #shoesText {
   color: white;
+  position: relative;
+  left: 0;
+  font-size: 2.5rem;
+}
+
+#accssText {
+  color: white;
+  position: relative;
+  left: 0;
+  font-size: 2.5rem;
+}
+
+
+#userText {
+  color: white;
+  position: relative;
+  left: 0;
+  font-size: 2.5rem;
+  max-width: 50%;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#submitbtn {
+  font-size: 1.5rem;
+  background-color: cadetblue;
+}
+
+#submitbtn2 {
+  font-size: 1.5rem;
+  background-color: cadetblue;
+}
+
+#location {
+  font-size: 1.5rem;
+}
+
+#boxLP{
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /**formatting for weather display in index*/
@@ -351,12 +412,21 @@ input[type="checkbox"]:checked + label:before {
 
 #namedisp {
   color: white;
+<<<<<<< HEAD
   text-align: center;
+=======
+  position: relative;
+  left: 50%;
+>>>>>>> a329ee6c9f8c070ad92b103d736dd3c9a94ced86
 }
 
 #tempdisp {
   color: white;
+<<<<<<< HEAD
   text-align: center;
+=======
+  
+>>>>>>> a329ee6c9f8c070ad92b103d736dd3c9a94ced86
 }
 
 #conditiondisp {
@@ -367,8 +437,27 @@ input[type="checkbox"]:checked + label:before {
 /*formatting for landing page information inside box*/
 
 .infoforbox {
-  color: white;
+
+  color:white
 }
+
+#generateOutfit{
+  position: absolute;
+  left: 5rem;
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+#generateHotOutfit{
+  position: absolute;
+  left: 5rem;
+  top: 40rem;
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
 
 /* CALENDAR PAGE */
 
@@ -402,3 +491,37 @@ input[type="checkbox"]:checked + label:before {
   align-items: center;
   justify-content: flex-start;
 }
+
+.contentLP1 {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.contentLP2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+.contentLP3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+.contentLP4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  #outfitsquares {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap ;
+  }
+

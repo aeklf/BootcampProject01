@@ -17,7 +17,7 @@
                 <div class="flex items-center justify-between h-16">
                   <div class="flex items-center">
                     <div class="flex-shrink-0">
-                      <img class="h-8 w-8" src="assets/images/icon_nifty.png" alt="icon_nifty">
+                      <a href="/index.html"><img class="h-8 w-8" src="assets/images/icon_nifty.png" alt="icon_nifty"></a>
                     </div>
                     <div class="hidden md:block">
                       <div class="ml-10 flex items-baseline space-x-4">
@@ -35,27 +35,36 @@
     </header>
 
     <body>
+
+      <div class="box" id="locationIndex">
+        <form>
+          <div class="input-container">
+          <input type="text" id = "location" required="" placeholder="Hey, input your location here to create an outfit from your preferences selections!"/>
+          <!-- <label id="locInput">Hey, input your location here to create an outfit from your preferences selections!</label>		 -->
+          </div>
+          <button type="button" class="btn" id="submitbtn"> <a href="#weatherText">Create my outfit</a></button>
+          <button type="button" class="btn" id="submitbtn2"> <a href="#weatherText">Create an alternate outfit for me</a></button>
+      </form>	
+      </div>
+
       <div class="sectionLP" id="skills">
-				<ul id = outfitsquares>
-            <li><span class="contentLP1">01</span></li>
-					<li><span class="contentLP2">02</span></li>
-					<li><span class="contentLP3">03</span></li>
-					<li><span class="contentLP4">04</span></li>
-				</ul>
+				<div id = outfitsquares>
+          <li class = "box1" ><div class="contentLP1"></div></li>
+					<li class = "box2"><div class="contentLP2"></div></li>
+					<li class = "box3"><div class="contentLP3"></div></li>
+					<li class = "box4"><div class="contentLP4"></div></li>
+        </div>
 		  </div>
 
       <div class="box" id="boxLP">
-        <p id = 'weatherText' class = 'infoforbox'>TEST</p>
-        <p id = 'recomText' class = 'infoforbox'>TEST</p>
-        <p id = 'topText' class = 'infoforbox'>TEST</p>
-        <p id = 'bottomText' class = 'infoforbox'>TEST</p>
-        <p id = 'shoesText' class = 'infoforbox'>TEST</p>
-        <p id = 'accssText' class = 'infoforbox'>TEST</p>
+        <p id = 'weatherText' class = 'infoforbox'></p>
+        <p id = 'userText' class = 'infoforbox'></p>
+        <p id = 'topText' class = 'infoforbox'></p>
+        <p id = 'bottomText' class = 'infoforbox'></p>
+        <p id = 'shoesText' class = 'infoforbox'></p>
+        <p id = 'accssText' class = 'infoforbox'></p>
       </div>
-
       
-      
-
         <script src="./script1.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 

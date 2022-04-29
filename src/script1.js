@@ -71,7 +71,7 @@ var User1;
 
 //////////creating image variables for each item of clothing
 var Sunglassesimage = document.createElement("img");
-Sunglassesimage.src = "./src/assets/images/sunglasses.png";
+Sunglassesimage.src = "./assets/images/sunglasses.png";
 
 var Hatimage = document.createElement("img");
 Hatimage.src = "http://path/to/image";
@@ -146,8 +146,7 @@ class NewUser {
         console.log(this.bottom.cold)
         console.log(this.shoes.cold)
         console.log(this.accessories.cold)
-        $('.contentLP').append(Sunglassesimage);
-        
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
 
     }//T1,H2 (cold,normal)
     assignOutfit4(){

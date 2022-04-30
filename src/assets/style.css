@@ -433,6 +433,17 @@ input[type="checkbox"]:checked + label:before {
   font-size: 30px;
 }
 
+#weatherText,
+#userText,
+#topText,
+#bottomText,
+#shoesText,
+#accssText {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
 #generateOutfit {
   position: absolute;
   left: 5rem;

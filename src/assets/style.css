@@ -430,7 +430,7 @@ input[type="checkbox"]:checked + label:before {
 
 .infoforbox {
   color: white;
-  font-size: x-small;
+  font-size: 30px;
 }
 
 #generateOutfit {

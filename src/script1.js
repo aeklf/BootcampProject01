@@ -125,7 +125,7 @@ class NewUser {
         $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
         $('#accssText').html("and maybe a " + this.accessories.hot + ".");
 
-        document.querySelector(".contentLP1").appendChild(beanieimage);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(jacketimage);
         document.querySelector(".contentLP3").appendChild(joggersimage);
         document.querySelector(".contentLP4").appendChild(bootsimage);
@@ -162,7 +162,7 @@ class NewUser {
         $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
         $('#accssText').html("and maybe a " + this.accessories.cold + ".");
 
-        document.querySelector(".contentLP1").appendChild(earmuffsimage);
+        document.querySelector(".contentLP1").appendChild(beanieimage);
         document.querySelector(".contentLP2").appendChild(jacketimage);
         document.querySelector(".contentLP3").appendChild(joggersimage);
         document.querySelector(".contentLP4").appendChild(bootsimage);
@@ -181,8 +181,8 @@ class NewUser {
         $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
         $('#accssText').html("and a " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
-        document.querySelector(".contentLP2").appendChild(jacketimage);
-        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP2").appendChild(tanktopimage);
+        document.querySelector(".contentLP3").appendChild(joggersimage);
         document.querySelector(".contentLP4").appendChild(bootsimage);
 
     }//T2,H2 (normal,normal)
@@ -198,9 +198,9 @@ class NewUser {
         $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
         $('#accssText').html("and a " + this.accessories.cold + ".");
         document.querySelector(".contentLP1").appendChild(beanieimage);
-        document.querySelector(".contentLP2").appendChild(bootsimage);
-        document.querySelector(".contentLP3").appendChild(jeansimage);
-        document.querySelector(".contentLP4").appendChild(sneakersimage);
+        document.querySelector(".contentLP2").appendChild(tanktopimage);
+        document.querySelector(".contentLP3").appendChild(joggersimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
  
     }//T2,H3 (normal,rain)
     assignOutfit8(){
@@ -215,9 +215,9 @@ class NewUser {
         $('#shoesText').html("A good pair of " + this.shoes.cold + ",");
         $('#accssText').html("and a " + this.accessories.cold + ".");
         document.querySelector(".contentLP1").appendChild(beanieimage);
-        document.querySelector(".contentLP2").appendChild(bootsimage);
-        document.querySelector(".contentLP3").appendChild(jeansimage);
-        document.querySelector(".contentLP4").appendChild(sneakersimage);
+        document.querySelector(".contentLP2").appendChild(jacketimage);
+        document.querySelector(".contentLP3").appendChild(joggersimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
 
     }//T3,H1 (hot,sunny)
     assignOutfit3(){
@@ -232,9 +232,9 @@ class NewUser {
         $('#shoesText').html("A good pair of " + this.shoes.hot + ",");
         $('#accssText').html("and  " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
-        document.querySelector(".contentLP2").appendChild(tshirtimage);
-        document.querySelector(".contentLP3").appendChild(gymshortsimage);
-        document.querySelector(".contentLP4").appendChild(crocsimage);
+        document.querySelector(".contentLP2").appendChild(tanktopimage);
+        document.querySelector(".contentLP3").appendChild(shortsimage);
+        document.querySelector(".contentLP4").appendChild(sandalsimage);
 
     }//T3,H2 (hot,normal)
     assignOutfit6(){
@@ -250,8 +250,8 @@ class NewUser {
         $('#accssText').html("and  " + this.accessories.hot + ".");
         document.querySelector(".contentLP1").appendChild(Sunglassesimage);
         document.querySelector(".contentLP2").appendChild(tanktopimage);
-        document.querySelector(".contentLP3").appendChild(gymshortsimage);
-        document.querySelector(".contentLP4").appendChild(crocsimage);
+        document.querySelector(".contentLP3").appendChild(shortsimage);
+        document.querySelector(".contentLP4").appendChild(sandalsimage);
 
     }//T3,H3 (hot,rain)
     assignOutfit9(){
@@ -265,9 +265,9 @@ class NewUser {
         $('#bottomText').html("Some " + this.bottom.cold + ",");
         $('#shoesText').html("A pair of " + this.shoes.cold + ",");
         $('#accssText').html("and a " + this.accessories.hot + ".");
-        document.querySelector(".contentLP1").appendChild(Hatimage);
-        document.querySelector(".contentLP2").appendChild(tshirtimage);
-        document.querySelector(".contentLP3").appendChild(jeansimage);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(tanktopimage);
+        document.querySelector(".contentLP3").appendChild(joggersimage);
         document.querySelector(".contentLP4").appendChild(bootsimage);
 
 
@@ -282,10 +282,10 @@ class NewUser {
         $('#shoesText').html("a pair of sturdy " + this.shoes.cold + ",");
         $('#accssText').html("and of course " + this.accessories.hot + ".");
         $('#userText').html("Sorry " + this.username + " I'm not sure about the weather right now, just go with: ")
-        document.querySelector(".contentLP1").appendChild(earmuffsimage);
-        document.querySelector(".contentLP2").appendChild(jacketimage);
-        document.querySelector(".contentLP3").appendChild(jeansimage);
-        document.querySelector(".contentLP4").appendChild(sneakersimage);
+        document.querySelector(".contentLP1").appendChild(Sunglassesimage);
+        document.querySelector(".contentLP2").appendChild(tanktopimage);
+        document.querySelector(".contentLP3").appendChild(joggersimage);
+        document.querySelector(".contentLP4").appendChild(bootsimage);
     }
 }
 

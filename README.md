@@ -21,7 +21,7 @@ THEN it is arranged based on weather, gender and preferences
 
 ## Technical Criteria
 
-- To utilize this app, its necessary to create your google calendar credentials, both “Claves de API” and “ID de clientes OAuth 2.0”
+- To utilize this app, its necessary to create your google calendar credentials, both “Claves de API” and “ID de clientes OAuth 2.0” and introduce them in the "calendar file row 16 and 17
 - Utilizes CSS framework obtained from TailwindCSS (https://tailwindcss.com/)
 - Deploys in GitHub Pages
 - Interactive and Responsive User Interface

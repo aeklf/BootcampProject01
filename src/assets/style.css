@@ -524,3 +524,15 @@ input[type="checkbox"]:checked + label:before {
   align-items: center;
   flex-wrap: wrap;
 }
+
+#llegada{
+  color: #484848;
+}
+
+#regreso{
+  color: #484848;
+}
+
+#ubicacion{
+  color: #484848;
+}

@@ -21,6 +21,10 @@ body {
   background-position: center;
 }
 
+#dropMenu {
+  margin-top: 50px;
+}
+
 .text-center {
   color: cornflowerblue;
   text-transform: uppercase;
@@ -46,7 +50,6 @@ body {
   background-color: rgba(0, 0, 0, 0.89);
   border-radius: 3px;
   padding: 70px 50px;
-  
 }
 
 #locInput {
@@ -229,7 +232,6 @@ input[type="checkbox"]:checked + label:before {
   margin-top: 50px;
   align-items: center;
   justify-content: center;
-  
 }
 
 /* LANDING PAGE */
@@ -255,8 +257,6 @@ input[type="checkbox"]:checked + label:before {
 
 #boxLP {
   margin-top: 100px;
-  
-  
 }
 
 @media screen and (max-width: 766px) {
@@ -369,7 +369,6 @@ input[type="checkbox"]:checked + label:before {
   font-size: 2.5rem;
 }
 
-
 #userText {
   color: white;
   position: relative;
@@ -395,7 +394,7 @@ input[type="checkbox"]:checked + label:before {
   font-size: 1.5rem;
 }
 
-#boxLP{
+#boxLP {
   position: relative;
   left: 0;
   display: flex;
@@ -412,21 +411,14 @@ input[type="checkbox"]:checked + label:before {
 
 #namedisp {
   color: white;
-<<<<<<< HEAD
   text-align: center;
-=======
   position: relative;
   left: 50%;
->>>>>>> a329ee6c9f8c070ad92b103d736dd3c9a94ced86
 }
 
 #tempdisp {
   color: white;
-<<<<<<< HEAD
   text-align: center;
-=======
-  
->>>>>>> a329ee6c9f8c070ad92b103d736dd3c9a94ced86
 }
 
 #conditiondisp {
@@ -437,11 +429,10 @@ input[type="checkbox"]:checked + label:before {
 /*formatting for landing page information inside box*/
 
 .infoforbox {
-
-  color:white
+  color: white;
 }
 
-#generateOutfit{
+#generateOutfit {
   position: absolute;
   left: 5rem;
   background-color: white;
@@ -449,7 +440,7 @@ input[type="checkbox"]:checked + label:before {
   padding: 0.5rem;
 }
 
-#generateHotOutfit{
+#generateHotOutfit {
   position: absolute;
   left: 5rem;
   top: 40rem;
@@ -457,7 +448,6 @@ input[type="checkbox"]:checked + label:before {
   font-size: 2rem;
   padding: 0.5rem;
 }
-
 
 /* CALENDAR PAGE */
 
@@ -493,35 +483,32 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .contentLP1 {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contentLP2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
-
+}
 
 .contentLP3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
-
+}
 
 .contentLP4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 
-  #outfitsquares {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap ;
-  }
-
+#outfitsquares {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
